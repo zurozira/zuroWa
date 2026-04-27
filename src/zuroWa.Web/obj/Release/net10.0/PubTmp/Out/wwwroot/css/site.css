@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+
+/*==MAIN==*/
+html {
+    font-size: 16px;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+main {
+    margin-top: 8vh;
+}
+
+body {
+    font-family: 'Jersey 10', 'Trebuchet MS', sans-serif;
+    margin-bottom: 60px;
+    
+    background-image: url("https://w.wallhaven.cc/full/0j/wallhaven-0j1rqw.jpg");
+    background-attachment: fixed;
+    
+    color: #ECDFCC;
+}
+
+footer .container {
+    
+}
+
+
+/*==FORM==*/
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.form-group {
+    font-size: 15px;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-color: olive;
+}
+
+.form-control {
+    font-family: "Jersey 10" ,"Trebuchet MS", sans-serif;
+    font-size: 14px;
+    background-color: #1a1d20;
+    color: #ECDFCC;
+}
+
+    .form-control:focus {
+        outline: none;
+        border-color: #b6ff00;
+        box-shadow: 0 0 0 0.2rem #b6ff00;
+        background-color: #1a1d20;
+        color: #ECDFCC;
+    }
+
+.control-label {
+    margin-left: 10px;
+}
+
+.form-check-label {
+    margin-left: 10px;
+}
+
+/*==TITLE==*/
+
+.headerTitle {
+    opacity: 0;
+    animation: fadeIn2 2s ease forwards;
+}
+
+@keyframes fadeIn2 {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*==TABLE==*/
+
+table {
+    border-collapse: separate;
+    border-radius: 20px;
+    background-color: transparent;!important;
+    border-spacing: 0 10px;
+}
+
+tr {
+    border-image: url('../others/border_01_nobackground.png') 12 fill / 12px / 0 round;
+    
+    background: #000000;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: calc(var(--delayVariable) * 0.1s);
+}
+
+tr:hover {
+    background-color: #3A4A3A;
+}
+
+tr td {
+    color: #ECDFCC !important;
+    background-color: transparent !important;
+    border: none;
+    align-content: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+thead th {
+    background-color: #3A4A3A !important;
+    color: #ECDFCC !important;
+    border: none !important;
+}
+
+thead th:first-child {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 0px;
+}
+
+/*==BUTTON==*/
+
+.btn-outline-light {
+    color: #ECDFCC;
+    border-color: #131312;
+    border-radius: 20px;
+}
+
+/*==NAVBAR==*/
+
+.navbar-custom {
+    background-image: url("https://w.wallhaven.cc/full/0j/wallhaven-0j1rqw.jpg");
+}
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-brand .nav-link {
+        transition: 0.3s;
+        color: #ECDFCC;
+    }
+
+.navbar-brand:hover {
+    color: #b6ff00;
+    text-shadow: 0 0 20px olivedrab;
+}
+
+.nav-link:hover {
+    color: #b6ff00;
+    text-shadow: 0 0 20px olivedrab;
+}
+
+/*==LOADER (I got this one online but I think it's cool)==*/
+.loader {
+    --loader-color: #ECDFCC;
+
+    width: 60px;
+    display: flex;
+    align-items: flex-start;
+    aspect-ratio: 1;
+}
+
+    .loader:before,
+    .loader:after {
+        content: "";
+        flex: 1;
+        aspect-ratio: 1;
+        --g: conic-gradient(from -90deg at 10px 10px,var(--loader-color) 90deg,#0000 0);
+        background: var(--g), var(--g), var(--g);
+        filter: drop-shadow(30px 30px 0 var(--loader-color));
+        animation: l20 1s infinite;
+    }
+
+    .loader:after {
+        transform: scaleX(-1);
+    }
+
+@keyframes l20 {
+    0% {
+        background-position: 0 0, 10px 10px, 20px 20px
+    }
+
+    33% {
+        background-position: 10px 10px
+    }
+
+    66% {
+        background-position: 0 20px,10px 10px,20px 0
+    }
+
+    100% {
+        background-position: 0 0, 10px 10px, 20px 20px
+    }
+}
+
+.loader-wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.pixel-border {
+    border-image: url("../others/border_01_nobackground.png") 12 fill / 12px / 0 round;
+    padding: 5px;
+    display: inline-block;
+    min-width: 100px;
+}
+
+.pixel-border2 {
+    border-image: url("../others/border_04_nobackground.png") 12 fill / 12px / 0 round;
+    padding: 5px;
+    display: inline-block;
+}
+
+.movie-row {
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    
+    opacity: 0;
+
+    animation: fadeIn 1s ease forwards;
+    animation-delay: calc(var(--delayVariable) * 0.1s);
+
+    background-color: rgba(0, 0, 0, 0.4);   /* ✅ semi-transparent dark overlay */
+    backdrop-filter: blur(3px);
+}
+
+
+.col-poster { 
+    width: 120px; flex-shrink: 0;
+}
+.col-title { 
+    width: 180px; 
+}
+.col-director { 
+    width: 150px; 
+}
+.col-date { 
+    width: 100px; 
+}
+.col-desc { 
+    flex: 1; 
+}
+.col-actions  { 
+    width: 120px; flex-shrink: 0; 
+}
+
+.Pbutton-details {
+    color: #fff;
+    background-color: #c1c019;
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+    border: 2px solid #ecdfcc;
+    cursor: pointer;
+    text-decoration: none;
+}
+.Pbutton-details:active {
+    transform: translateY(5px);
+}
+.Pbutton-delete {
+    color: #fff;
+    background-color: #fb4934;
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+    border: 2px solid #ecdfcc;
+    cursor: pointer;
+    text-decoration: none;
+}
+.Pbutton-delete:active {
+    transform: translateY(5px);
+}
+
+.detail-container {
+    font-family: "Jersey 10", sans-serif;
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.detail-info {
+    max-width: 500px;
+}
+
+.detail-title {
+    font-size: 3rem;
+}
+.detail-director {
+    font-size: 2rem;
+}
+.detail-date, .detail-genre {
+    font-size: 2rem;
+}
+.detail-description {
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0);
+
+    }
+}
+.fadeIn1 {
+    opacity: 0;
+    animation: 1s fadeIn ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slideIn1 {
+    opacity: 0;
+    animation: 1s slideIn ease forwards;
+}

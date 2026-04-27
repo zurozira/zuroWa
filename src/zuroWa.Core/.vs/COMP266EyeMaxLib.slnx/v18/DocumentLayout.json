@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\saskPolytech\\Semester 2\\COMP266_WebApp_3\\FinalPROJECTVu\\COMP266EyeMaxLib\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{34E68CAA-1E1E-ADFA-21FE-21B2801DAA35}|COMP266EyeMaxLib.csproj|d:\\saskpolytech\\semester 2\\comp266_webapp_3\\finalprojectvu\\comp266eyemaxlib\\logic\\genreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34E68CAA-1E1E-ADFA-21FE-21B2801DAA35}|COMP266EyeMaxLib.csproj|solutionrelative:logic\\genreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34E68CAA-1E1E-ADFA-21FE-21B2801DAA35}|COMP266EyeMaxLib.csproj|d:\\saskpolytech\\semester 2\\comp266_webapp_3\\finalprojectvu\\comp266eyemaxlib\\domain\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34E68CAA-1E1E-ADFA-21FE-21B2801DAA35}|COMP266EyeMaxLib.csproj|solutionrelative:domain\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34E68CAA-1E1E-ADFA-21FE-21B2801DAA35}|COMP266EyeMaxLib.csproj|d:\\saskpolytech\\semester 2\\comp266_webapp_3\\finalprojectvu\\comp266eyemaxlib\\data\\genrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34E68CAA-1E1E-ADFA-21FE-21B2801DAA35}|COMP266EyeMaxLib.csproj|solutionrelative:data\\genrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34E68CAA-1E1E-ADFA-21FE-21B2801DAA35}|COMP266EyeMaxLib.csproj|d:\\saskpolytech\\semester 2\\comp266_webapp_3\\finalprojectvu\\comp266eyemaxlib\\data\\connectionbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34E68CAA-1E1E-ADFA-21FE-21B2801DAA35}|COMP266EyeMaxLib.csproj|solutionrelative:data\\connectionbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34E68CAA-1E1E-ADFA-21FE-21B2801DAA35}|COMP266EyeMaxLib.csproj|d:\\saskpolytech\\semester 2\\comp266_webapp_3\\finalprojectvu\\comp266eyemaxlib\\logic\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34E68CAA-1E1E-ADFA-21FE-21B2801DAA35}|COMP266EyeMaxLib.csproj|solutionrelative:logic\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "D:\\saskPolytech\\Semester 2\\COMP266_WebApp_3\\FinalPROJECTVu\\COMP266EyeMaxLib\\Domain\\Genre.cs",
+              "RelativeDocumentMoniker": "Domain\\Genre.cs",
+              "ToolTip": "D:\\saskPolytech\\Semester 2\\COMP266_WebApp_3\\FinalPROJECTVu\\COMP266EyeMaxLib\\Domain\\Genre.cs",
+              "RelativeToolTip": "Domain\\Genre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T01:59:53.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GenreRepository.cs",
+              "DocumentMoniker": "D:\\saskPolytech\\Semester 2\\COMP266_WebApp_3\\FinalPROJECTVu\\COMP266EyeMaxLib\\Data\\GenreRepository.cs",
+              "RelativeDocumentMoniker": "Data\\GenreRepository.cs",
+              "ToolTip": "D:\\saskPolytech\\Semester 2\\COMP266_WebApp_3\\FinalPROJECTVu\\COMP266EyeMaxLib\\Data\\GenreRepository.cs",
+              "RelativeToolTip": "Data\\GenreRepository.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwDAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T01:58:51.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenreService.cs",
+              "DocumentMoniker": "D:\\saskPolytech\\Semester 2\\COMP266_WebApp_3\\FinalPROJECTVu\\COMP266EyeMaxLib\\Logic\\GenreService.cs",
+              "RelativeDocumentMoniker": "Logic\\GenreService.cs",
+              "ToolTip": "D:\\saskPolytech\\Semester 2\\COMP266_WebApp_3\\FinalPROJECTVu\\COMP266EyeMaxLib\\Logic\\GenreService.cs",
+              "RelativeToolTip": "Logic\\GenreService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T01:57:16.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConnectionBuilder.cs",
+              "DocumentMoniker": "D:\\saskPolytech\\Semester 2\\COMP266_WebApp_3\\FinalPROJECTVu\\COMP266EyeMaxLib\\Data\\ConnectionBuilder.cs",
+              "RelativeDocumentMoniker": "Data\\ConnectionBuilder.cs",
+              "ToolTip": "D:\\saskPolytech\\Semester 2\\COMP266_WebApp_3\\FinalPROJECTVu\\COMP266EyeMaxLib\\Data\\ConnectionBuilder.cs",
+              "RelativeToolTip": "Data\\ConnectionBuilder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAACkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T01:41:04.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MovieService.cs",
+              "DocumentMoniker": "D:\\saskPolytech\\Semester 2\\COMP266_WebApp_3\\FinalPROJECTVu\\COMP266EyeMaxLib\\Logic\\MovieService.cs",
+              "RelativeDocumentMoniker": "Logic\\MovieService.cs",
+              "ToolTip": "D:\\saskPolytech\\Semester 2\\COMP266_WebApp_3\\FinalPROJECTVu\\COMP266EyeMaxLib\\Logic\\MovieService.cs",
+              "RelativeToolTip": "Logic\\MovieService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T01:23:45.95Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

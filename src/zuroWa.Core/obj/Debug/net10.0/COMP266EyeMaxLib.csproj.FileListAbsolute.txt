@@ -1,0 +1,48 @@
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\COMP266EyeMaxLib\bin\Debug\net10.0\COMP266EyeMaxLib.deps.json
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\COMP266EyeMaxLib\bin\Debug\net10.0\COMP266EyeMaxLib.dll
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\COMP266EyeMaxLib\bin\Debug\net10.0\COMP266EyeMaxLib.pdb
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.csproj.AssemblyReference.cache
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.AssemblyInfoInputs.cache
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.AssemblyInfo.cs
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.csproj.CoreCompileInputs.cache
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.dll
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\COMP266EyeMaxLib\obj\Debug\net10.0\refint\COMP266EyeMaxLib.dll
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.pdb
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\COMP266EyeMaxLib\obj\Debug\net10.0\ref\COMP266EyeMaxLib.dll
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\bin\Debug\net10.0\COMP266EyeMaxLib.deps.json
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\bin\Debug\net10.0\COMP266EyeMaxLib.dll
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\bin\Debug\net10.0\COMP266EyeMaxLib.pdb
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.csproj.AssemblyReference.cache
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.AssemblyInfoInputs.cache
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.AssemblyInfo.cs
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.csproj.CoreCompileInputs.cache
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.dll
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\refint\COMP266EyeMaxLib.dll
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.pdb
+D:\saskPolytech\bIS\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\ref\COMP266EyeMaxLib.dll
+D:\saskPolytech\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\bin\Debug\net10.0\COMP266EyeMaxLib.deps.json
+D:\saskPolytech\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\bin\Debug\net10.0\COMP266EyeMaxLib.dll
+D:\saskPolytech\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\bin\Debug\net10.0\COMP266EyeMaxLib.pdb
+D:\saskPolytech\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.csproj.AssemblyReference.cache
+D:\saskPolytech\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\saskPolytech\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.AssemblyInfoInputs.cache
+D:\saskPolytech\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.AssemblyInfo.cs
+D:\saskPolytech\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.csproj.CoreCompileInputs.cache
+D:\saskPolytech\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.dll
+D:\saskPolytech\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\refint\COMP266EyeMaxLib.dll
+D:\saskPolytech\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.pdb
+D:\saskPolytech\Semester 2\COMP266 - Web App 3\CongVu_Lab3_COMP266\COMP266EyeMaxLib\obj\Debug\net10.0\ref\COMP266EyeMaxLib.dll
+D:\saskPolytech\Semester 2\COMP266_WebApp_3\FinalPROJECTVu\COMP266EyeMaxLib\bin\Debug\net10.0\COMP266EyeMaxLib.deps.json
+D:\saskPolytech\Semester 2\COMP266_WebApp_3\FinalPROJECTVu\COMP266EyeMaxLib\bin\Debug\net10.0\COMP266EyeMaxLib.dll
+D:\saskPolytech\Semester 2\COMP266_WebApp_3\FinalPROJECTVu\COMP266EyeMaxLib\bin\Debug\net10.0\COMP266EyeMaxLib.pdb
+D:\saskPolytech\Semester 2\COMP266_WebApp_3\FinalPROJECTVu\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.csproj.AssemblyReference.cache
+D:\saskPolytech\Semester 2\COMP266_WebApp_3\FinalPROJECTVu\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\saskPolytech\Semester 2\COMP266_WebApp_3\FinalPROJECTVu\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.AssemblyInfoInputs.cache
+D:\saskPolytech\Semester 2\COMP266_WebApp_3\FinalPROJECTVu\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.AssemblyInfo.cs
+D:\saskPolytech\Semester 2\COMP266_WebApp_3\FinalPROJECTVu\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.csproj.CoreCompileInputs.cache
+D:\saskPolytech\Semester 2\COMP266_WebApp_3\FinalPROJECTVu\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.dll
+D:\saskPolytech\Semester 2\COMP266_WebApp_3\FinalPROJECTVu\COMP266EyeMaxLib\obj\Debug\net10.0\refint\COMP266EyeMaxLib.dll
+D:\saskPolytech\Semester 2\COMP266_WebApp_3\FinalPROJECTVu\COMP266EyeMaxLib\obj\Debug\net10.0\COMP266EyeMaxLib.pdb
+D:\saskPolytech\Semester 2\COMP266_WebApp_3\FinalPROJECTVu\COMP266EyeMaxLib\obj\Debug\net10.0\ref\COMP266EyeMaxLib.dll

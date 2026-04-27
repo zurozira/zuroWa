@@ -1,0 +1,34 @@
+﻿@model IEnumerable<COMP266EyeMaxCinemas.Models.MovieViewModel>
+
+@{
+    ViewData["Title"] = "All Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container headerTitle text-center">
+    <h1>All Movie</h1>
+</div>
+@{var i = 0;}
+@foreach (var item in Model) {
+    
+    <div class="movie-row pixel-border2" style="--delayVariable:@i">
+        <div class="pixel-border">
+            <img alt="" src="@(item.PosterPath.StartsWith("~/") ? Url.Content(item.PosterPath) : item.PosterPath)">
+        </div>
+        <div class="col-title">
+            @item.Title
+        </div>
+        <div class="col-director">
+            @item.Director
+        </div>
+        <div class="col-date">
+            @Html.DisplayFor(modelItem => item.DateReleased)
+        </div>
+        <div class="col-desc">
+            @item.Description
+        </div>
+        <div class="col-actions">
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new { @class = "Pbutton-delete"})
+        </div>
+    </div>
+    i++;
+}
