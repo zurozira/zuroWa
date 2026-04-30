@@ -10,3 +10,4 @@
 /home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Core/obj/Debug/net10.0/refint/zuroWa.Core.dll
 /home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Core/obj/Debug/net10.0/zuroWa.Core.pdb
 /home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Core/obj/Debug/net10.0/ref/zuroWa.Core.dll
+/home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Core/obj/Debug/net10.0/zuroWa.Core.sourcelink.json

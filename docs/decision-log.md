@@ -1,6 +1,10 @@
 # Decision Log
 
 ## 2026-04-26
+**Decision: Migrate all namespaces from COMP266EyeMaxLib.* to zuroWa.Core.* gradually as files are refactored. 
+New files should always use the correct namespace from the start.
+
+## 2026-04-26
 **Decision:** Use `zuroWa` as the main solution/app name and `EyeMax` as the movie feature/module.
 
 **Why:** The app will grow into a broader portfolio/personal platform, so the top-level name should not be movie-specific.

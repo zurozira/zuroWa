@@ -324,8 +324,6 @@
 /home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/compressed/gcj2keyxny-{0}-muycvpuwrr-muycvpuwrr.gz
 /home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/compressed/8syjhdjum8-{0}-87fc7y1x7t-87fc7y1x7t.gz
 /home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/compressed/akv34cz5gw-{0}-mlv21k5csn-mlv21k5csn.gz
-/home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/compressed/43q541ppqv-{0}-uqvoo4d4c9-uqvoo4d4c9.gz
-/home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/compressed/hbteewfykm-{0}-uqvoo4d4c9-uqvoo4d4c9.gz
 /home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/staticwebassets.build.json
 /home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/staticwebassets.build.json.cache
 /home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/staticwebassets.development.json
@@ -337,3 +335,6 @@
 /home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/zuroWa.Web.pdb
 /home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/zuroWa.Web.genruntimeconfig.cache
 /home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/ref/zuroWa.Web.dll
+/home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/zuroWa.Web.sourcelink.json
+/home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/compressed/43q541ppqv-{0}-hbcsdnu9ow-hbcsdnu9ow.gz
+/home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/compressed/hbteewfykm-{0}-hbcsdnu9ow-hbcsdnu9ow.gz
