@@ -4,7 +4,7 @@
 Refactor the EyeMax movie feature from local-database-first into TMDB-API-first.
 
 ## Current Focus
-Split the old `MovieService` responsibilities into clearer services.
+Introduce search flow and wire one web entry point to TMDB
 
 ## Next Small Step
 Create or refine service boundaries for:

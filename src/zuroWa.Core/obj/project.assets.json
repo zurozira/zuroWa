@@ -1375,11 +1375,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj",
+      "projectUniqueName": "/home/zuro/RiderProjects/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj",
       "projectName": "zuroWa.Core",
-      "projectPath": "/home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj",
+      "projectPath": "/home/zuro/RiderProjects/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj",
       "packagesPath": "/home/zuro/.nuget/packages/",
-      "outputPath": "/home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Core/obj/",
+      "outputPath": "/home/zuro/RiderProjects/zuroWa/src/zuroWa.Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/zuro/.nuget/NuGet/NuGet.Config"
@@ -1438,7 +1438,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.104/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.106/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

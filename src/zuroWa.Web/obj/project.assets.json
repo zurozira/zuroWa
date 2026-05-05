@@ -6041,11 +6041,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj",
+      "projectUniqueName": "/home/zuro/RiderProjects/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj",
       "projectName": "zuroWa.Web",
-      "projectPath": "/home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj",
+      "projectPath": "/home/zuro/RiderProjects/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj",
       "packagesPath": "/home/zuro/.nuget/packages/",
-      "outputPath": "/home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Web/obj/",
+      "outputPath": "/home/zuro/RiderProjects/zuroWa/src/zuroWa.Web/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/zuro/.nuget/NuGet/NuGet.Config"
@@ -6061,8 +6061,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj": {
-              "projectPath": "/home/zuro/ProjectsArena/Rider/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj"
+            "/home/zuro/RiderProjects/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj": {
+              "projectPath": "/home/zuro/RiderProjects/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj"
             }
           }
         }
@@ -6119,7 +6119,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.104/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.106/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

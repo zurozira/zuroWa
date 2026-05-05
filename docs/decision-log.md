@@ -1,5 +1,8 @@
 # Decision Log
 
+## 2026-05-04
+Gradually migrating from the old COMP266EyeMaxLib structure and mixed movie service toward zuroWa.Core with explicit TMDB boundaries.
+
 ## 2026-04-26
 **Decision: Migrate all namespaces from COMP266EyeMaxLib.* to zuroWa.Core.* gradually as files are refactored. 
 New files should always use the correct namespace from the start.

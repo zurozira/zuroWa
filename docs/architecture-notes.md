@@ -24,6 +24,7 @@
 - Do not collapse TMDB and local DB models into one class unless there is a deliberate app-owned save flow.
 
 ## Service Boundaries
+- TMDB HTTP/search logic now lives in EyeMaxTmdbService
 - `EyeMaxTmdbService` should handle TMDB search/details.
 - `EyeMaxFavoriteService` should handle local favorite movie persistence.
 - Repositories should stay focused on persistence.
