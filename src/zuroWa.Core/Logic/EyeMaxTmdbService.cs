@@ -1,4 +1,5 @@
 using Newtonsoft.Json.Linq;
+using zuroWa.Core.Domain;
 
 namespace zuroWa.Core.Logic;
 
@@ -12,6 +13,47 @@ public class EyeMaxTmdbService
     private string BuildUrl(string title)
     {
         return $"{baseURL}/search/movie?api_key={apiKey}&query={title}&include_adult=false&language=en-US&page=1";
+    }
+
+    public async Task<List<TmdbMovie>> SearchMoviesAsync(string title)
+    {
+        List<TmdbMovie> movies = new List<TmdbMovie>();
+        TmdbMovie movie = new TmdbMovie();
+        
+        var request = new HttpRequestMessage(HttpMethod.Get, BuildUrl(title));
+        request.Headers.Add("Accept", "application/json");
+
+        try
+        {
+            var response = await client.SendAsync(request);
+            response.EnsureSuccessStatusCode();
+            var payload = await response.Content.ReadAsStringAsync();
+            var results = JObject.Parse(payload)["results"];
+
+            if (!results.HasValues)
+            {
+                return null;
+            }
+
+            foreach (var result in results)
+            {
+                movie = new TmdbMovie();
+                movie.Id = int.Parse(result["id"].ToString());
+                movie.Title = result["title"].ToString();
+                movie.ReleaseDate = result["release_date"].ToString();
+                movie.Overview = result["overview"].ToString();
+                movie.PosterPath = result["poster_path"].ToString();
+
+                movies.Add(movie);
+            }
+
+            return movies;
+        }
+
+        catch (Exception)
+        {
+            return movies;
+        }
     }
     
     public async Task<int?> GetMovieIdAsync(string title)
