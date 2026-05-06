@@ -1,5 +1,5 @@
 using Newtonsoft.Json.Linq;
-using zuroWa.Core.Domain;
+using zuroWa.Core.Domain.EyeMax;
 
 namespace zuroWa.Core.Logic;
 
@@ -18,8 +18,49 @@ public class EyeMaxTmdbService
     public async Task<List<TmdbMovie>> SearchMoviesAsync(string title)
     {
         List<TmdbMovie> movies = new List<TmdbMovie>();
-        TmdbMovie movie = new TmdbMovie();
-        
+
+        var request = new HttpRequestMessage(HttpMethod.Get, BuildUrl(title));
+        request.Headers.Add("Accept", "application/json");
+
+        try
+        {
+            var response = await client.SendAsync(request);
+            response.EnsureSuccessStatusCode();
+            var payload = await response.Content.ReadAsStringAsync();
+            var results = JObject.Parse(payload)["results"];
+
+            if (results == null)
+                return movies;
+
+            TmdbMovie movie;
+            foreach (var result in results)
+            {
+                movie = new TmdbMovie();
+
+                if (result["id"] == null)
+                    continue;
+
+                if (!int.TryParse(result["id"].ToString(), out int id))
+                    continue;
+
+                movie.Id = id;
+                movie.Title = result["title"]?.ToString() ?? "";
+                movie.ReleaseDate = result["release_date"]?.ToString() ?? "";
+                movie.Overview = result["overview"]?.ToString() ?? "";
+                movie.PosterPath = result["poster_path"]?.ToString();
+
+                movies.Add(movie);
+            }
+            return movies;
+        }
+        catch (Exception)
+        {
+            return movies;
+        }
+    }
+
+    public async Task<int?> GetMovieIdAsync(string title)
+    {
         var request = new HttpRequestMessage(HttpMethod.Get, BuildUrl(title));
         request.Headers.Add("Accept", "application/json");
 
@@ -35,47 +76,8 @@ public class EyeMaxTmdbService
                 return null;
             }
 
-            foreach (var result in results)
-            {
-                movie = new TmdbMovie();
-                movie.Id = int.Parse(result["id"].ToString());
-                movie.Title = result["title"].ToString();
-                movie.ReleaseDate = result["release_date"].ToString();
-                movie.Overview = result["overview"].ToString();
-                movie.PosterPath = result["poster_path"].ToString();
-
-                movies.Add(movie);
-            }
-
-            return movies;
-        }
-
-        catch (Exception)
-        {
-            return movies;
-        }
-    }
-    
-    public async Task<int?> GetMovieIdAsync(string title)
-    {
-        var request = new HttpRequestMessage(HttpMethod.Get, BuildUrl(title));
-        request.Headers.Add("Accept", "application/json");
-
-        try
-        {
-            var response = await client.SendAsync(request);
-            response.EnsureSuccessStatusCode();
-            var payload = await response.Content.ReadAsStringAsync();
-            var results = JObject.Parse(payload)["results"];
-            
-            if (!results.HasValues) 
-            {
-                return null;
-            }
-
             return int.Parse(results[0]["id"].ToString());
         }
-        
         catch (Exception e)
         {
             Console.WriteLine(e);
@@ -97,15 +99,16 @@ public class EyeMaxTmdbService
             response.EnsureSuccessStatusCode();
             var payload = await response.Content.ReadAsStringAsync();
             var results = JObject.Parse(payload)["results"];
-            
-            if (!results.HasValues) 
+
+            if (!results.HasValues)
             {
                 return null;
             }
 
             var posterPath = results[0]["poster_path"]?.ToString();
 
-            if (posterPath == null) return null;
+            if (posterPath == null)
+                return null;
 
             switch (size)
             {
@@ -115,7 +118,6 @@ public class EyeMaxTmdbService
                     return $"{largeImageBaseUrl}{posterPath}";
             }
         }
-        
         catch (Exception e)
         {
             Console.WriteLine(e);
