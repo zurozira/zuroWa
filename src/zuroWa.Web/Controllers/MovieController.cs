@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace COMP266EyeMaxCinemas.Controllers
+namespace zuroWa.Web.Controllers
 {
     public class MovieController : Controller
     {
