@@ -11,10 +11,7 @@ namespace zuroWa.Web.Controllers
     {
         private readonly MovieService _movieService = new MovieService();
         private readonly GenreService _genreService = new GenreService();
-
-
-        // Retrieves all movies with their posters and maps them to view models for display.
-        // returns A view containing a list of MovieViewModel
+        
         // GET: MovieController
         public async Task<ActionResult> Index()
         {
@@ -40,20 +37,14 @@ namespace zuroWa.Web.Controllers
         {
             return View();
         }
-
-        // Displays the form to create a new movie. Populates the genre dropdown
-        // and sets the default release date to the current date.
-        // returns A view with a MovieAddEditViewModel pre-populated with genres
+        
         // GET: MovieController/Create
         public ActionResult Create()
         {
             List<Genre> genres = _genreService.SelectAll();
 
             MovieAddEditViewModel vm = new MovieAddEditViewModel();
-
-            // I added this line of code since we created a new MovieAddEditViewModel instance, 
-            // its DateRealeased will be default (01/01/0001) and it would cause some error adding
-            // (only from 1976 onwards)
+            
             vm.DateReleased = DateTime.Now;
 
             foreach (Genre g in genres)
@@ -67,10 +58,6 @@ namespace zuroWa.Web.Controllers
             return View(vm);
         }
 
-        // Handles the submission of the create movie form. Adds the new movie
-        // using the provided view model data.
-        // param m - The MovieViewModel containing the new movie's data
-        //  returnsRedirects to Index on success; returns the form view with an error message on failure.</returns>
         // POST: MovieController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -110,10 +97,6 @@ namespace zuroWa.Web.Controllers
             }
         }
 
-        // Displays the delete confirmation page for a specific movie,
-        // including the movie's title and poster.
-        // param id - The unique identifier of the movie to delete
-        // returns A view with a MovieViewModel for confirmation
         // GET: MovieController/Delete/5
         public async Task<ActionResult> Delete(int id)
         {
@@ -127,10 +110,6 @@ namespace zuroWa.Web.Controllers
             return View(mModel);
         }
 
-        // Handles the confirmed deletion of a specific movie.
-        // param id The unique identifier of the movie to delete
-        // param collection - The form data from the confirmation page
-        // returns Redirects to Index on success, returns the view with an error message on failure
         // POST: MovieController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]

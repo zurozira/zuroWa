@@ -1,9 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
+using zuroWa.Core.Logic;
+using zuroWa.Core.Domain.EyeMax;
 
 namespace zuroWa.Web.Controllers;
 
 public class EyeMaxController : Controller
 {
+    private EyeMaxTmdbService tmdbService = new EyeMaxTmdbService();
+    
     // GET
     public IActionResult Search()
     {
@@ -11,8 +15,10 @@ public class EyeMaxController : Controller
     }
 
     //POST
-    public async Task<ActionResult> Search(string title)
+    public async Task<ActionResult> SearchResult(string title)
     {
-        // Check comment
+        List<TmdbMovie> movies = await tmdbService.SearchMoviesAsync(title);
+
+        return View(movies);
     }
 }

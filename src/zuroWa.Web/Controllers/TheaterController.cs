@@ -10,10 +10,7 @@ namespace COMP266EyeMaxCinemas.Controllers
     {
         private readonly MovieService movieService = new MovieService();
         private readonly GenreService genreService = new GenreService();
-
-        // Retrieves all now-showing movies with their posters and maps them
-        // to view models for display on the theater landing page.
-        // returns A view containing a list of MovieViewModel objects currently in theaters
+        
         // GET: TheaterController
         public async Task<ActionResult> Index()
         {         
@@ -33,11 +30,7 @@ namespace COMP266EyeMaxCinemas.Controllers
 
             return View(viewModels);
         }
-
-        // Retrieves the full details and poster of a specific movie, resolves
-        // its genre from the category ID, and presents them in a detail view.
-        // param id - The unique identifier of the movie to display
-        // returns A view with a fully populated MovieViewModel, including genre description.
+        
         // GET: TheaterController/Details/5
         public async Task<ActionResult> Details(int id)
         {
