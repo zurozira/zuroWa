@@ -1,13 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
-using zuroWa.Core.Logic;
+using Microsoft.IdentityModel.Tokens;
 using zuroWa.Core.Domain.EyeMax;
+using zuroWa.Core.Logic;
 
 namespace zuroWa.Web.Controllers;
 
 public class EyeMaxController : Controller
 {
     private EyeMaxTmdbService tmdbService = new EyeMaxTmdbService();
-    
+
     // GET
     public IActionResult Search()
     {
@@ -15,10 +16,21 @@ public class EyeMaxController : Controller
     }
 
     //POST
-    public async Task<ActionResult> SearchResult(string title)
+    public async Task<ActionResult> Search(string title)
     {
-        List<TmdbMovie> movies = await tmdbService.SearchMoviesAsync(title);
+        if (string.IsNullOrWhiteSpace(title))
+        {
+            return View(Search());
+        }
 
-        return View(movies);
+        try
+        {
+            List<TmdbMovie> movies = await tmdbService.SearchMoviesAsync(title);
+            return View(movies);
+        }
+        catch (Exception)
+        {
+            return View(Search());
+        }
     }
 }
