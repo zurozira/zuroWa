@@ -1,0 +1,14 @@
+@{
+    ViewBag.Title = "Search";
+    Layout = "_Layout";
+}
+
+<h2>TMDB Search</h2>
+
+<form action="SearchResult" method="post">
+    <div>
+        <p>Input movie name</p>
+        <input type="text" id="title" name="title">
+        <button type="submit">Search</button>
+    </div>
+</form>

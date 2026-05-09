@@ -1,11 +1,27 @@
 # Decision Log
 
+## 2026-05-08
+**Decision:** Wire TMDB search through `EyeMaxController` in the web layer using dependency injection.
+
+**Why:** This creates a clean TMDB-first web entry point and keeps the search flow separate from the local DB movie flow.
+
+**Impact:** `EyeMaxController` now depends on `EyeMaxTmdbService`, and TMDB search results are displayed through a dedicated web flow.
+
+---
+
 ## 2026-05-04
-Gradually migrating from the old COMP266EyeMaxLib structure and mixed movie service toward zuroWa.Core with explicit TMDB boundaries.
+**Decision:** Gradually migrate from the old `COMP266EyeMaxLib` structure and mixed movie service toward `zuroWa.Core` with explicit TMDB boundaries.
+
+**Impact:** New files should use `zuroWa.Core.*` namespaces, and the old structure should be phased out as refactoring continues.
+
+---
 
 ## 2026-04-26
-**Decision: Migrate all namespaces from COMP266EyeMaxLib.* to zuroWa.Core.* gradually as files are refactored. 
-New files should always use the correct namespace from the start.
+**Decision:** Migrate all namespaces from `COMP266EyeMaxLib.*` to `zuroWa.Core.*` gradually as files are refactored.
+
+**Why:** New files should always use the correct namespace from the start.
+
+---
 
 ## 2026-04-26
 **Decision:** Use `zuroWa` as the main solution/app name and `EyeMax` as the movie feature/module.

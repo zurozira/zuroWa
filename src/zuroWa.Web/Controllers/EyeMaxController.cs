@@ -1,14 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 using zuroWa.Core.Domain.EyeMax;
 using zuroWa.Core.Logic;
 
 namespace zuroWa.Web.Controllers;
 
-public class EyeMaxController : Controller
+public class EyeMaxController(EyeMaxTmdbService tmdbService) : Controller
 {
-    private EyeMaxTmdbService tmdbService = new EyeMaxTmdbService();
-
     // GET
     public IActionResult Search()
     {
@@ -16,11 +13,12 @@ public class EyeMaxController : Controller
     }
 
     //POST
-    public async Task<ActionResult> Search(string title)
+    [HttpPost]
+    public async Task<ActionResult> SearchResult(string title)
     {
         if (string.IsNullOrWhiteSpace(title))
         {
-            return View(Search());
+            return RedirectToAction(nameof(Search));
         }
 
         try
@@ -30,7 +28,7 @@ public class EyeMaxController : Controller
         }
         catch (Exception)
         {
-            return View(Search());
+            return RedirectToAction(nameof(Search));
         }
     }
 }

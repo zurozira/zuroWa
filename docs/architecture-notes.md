@@ -24,11 +24,16 @@
 - Do not collapse TMDB and local DB models into one class unless there is a deliberate app-owned save flow.
 
 ## Service Boundaries
-- TMDB HTTP/search logic now lives in EyeMaxTmdbService
-- `EyeMaxTmdbService` should handle TMDB search/details.
+- `EyeMaxTmdbService` handles TMDB search/details.
 - `EyeMaxFavoriteService` should handle local favorite movie persistence.
 - Repositories should stay focused on persistence.
 - External API calls should be isolated in dedicated services.
+
+## Web Layer Status
+- `EyeMaxController` is the TMDB search entry point in `zuroWa.Web`.
+- `EyeMaxController` receives `EyeMaxTmdbService` through dependency injection.
+- `Search` shows the search form.
+- `SearchResult` displays TMDB search results.
 
 ## Current Technical Debt
 - Refactor old `MovieService` so it no longer mixes DB and TMDB responsibilities.

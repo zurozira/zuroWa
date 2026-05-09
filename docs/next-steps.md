@@ -1,28 +1,23 @@
 # Next Steps
 
 ## Current Goal
-
-Wire TMDB search flow into the web layer.
+Polish the EyeMax TMDB search experience.
 
 ## Current Focus
-
-Create one controller action that uses `EyeMaxTmdbService.SearchMoviesAsync()` and displays `TmdbMovie` results.
+Improve the search results page and decide the next feature boundary.
 
 ## Next Small Step
-
-- Create or update a controller action for movie search.
-- Call `EyeMaxTmdbService.SearchMoviesAsync(title)`.
-- Return `TmdbMovie` results to a simple view.
-- Do not involve `MovieRepository` in search.
+- Clean up `SearchResult.cshtml`.
+- Show a friendly empty state when no results are returned.
+- Decide whether the next step is movie details or favorites.
+- Keep the local DB separate from TMDB search results.
 
 ## After That
-
-- Add search form to a Razor page or view.
 - Implement `EyeMaxFavoriteService` for local favorites.
-- Update old controllers to use new service boundaries.
+- Add a favorites page or flow.
+- Update old controllers only if needed for the new architecture.
 
 ## Known Reminders
-
 - Do not overengineer for future React yet, but keep backend decoupled.
 - Keep comments/documentation useful and light.
 - Fix nullable warnings gradually, not all at once.

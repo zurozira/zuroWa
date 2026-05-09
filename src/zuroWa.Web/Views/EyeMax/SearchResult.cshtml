@@ -1,0 +1,28 @@
+@model IEnumerable<zuroWa.Core.Domain.EyeMax.TmdbMovie>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Search Result</h2>
+
+@{var i = 0;}
+@foreach (var item in Model) {
+    
+    <div class="movie-row pixel-border2" style="--delayVariable:@i">
+        <div class="pixel-border">
+            <img alt="" src="https://image.tmdb.org/t/p/w92" + @item.PosterPath>
+        </div>
+        <div class="col-title">
+            @item.Title
+        </div>
+        <div class="col-date">
+            @item.ReleaseDate
+        </div>
+        <div class="col-desc">
+            @item.Overview
+        </div>
+    </div>
+    i++;
+}

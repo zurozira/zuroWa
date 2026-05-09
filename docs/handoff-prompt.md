@@ -17,6 +17,9 @@ I am building a .NET 10 project called `zuroWa`.
 
 Inside `zuroWa`, I am currently building one feature/module called `EyeMax`, which is a movie search engine powered by the TMDB API.
 
+## Current Status
+TMDB search is already working through `EyeMaxController` and `EyeMaxTmdbService`. The next step is polishing the result page and planning favorites.
+
 ## Main Goal Right Now
 My current goal is to build the `EyeMax` feature properly:
 - Search movies using the TMDB API
