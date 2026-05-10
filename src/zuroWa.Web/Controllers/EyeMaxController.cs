@@ -24,6 +24,7 @@ public class EyeMaxController(EyeMaxTmdbService tmdbService) : Controller
         try
         {
             List<TmdbMovie> movies = await tmdbService.SearchMoviesAsync(title);
+            ViewBag.Query = title;
             return View(movies);
         }
         catch (Exception)

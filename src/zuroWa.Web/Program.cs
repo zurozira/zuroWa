@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using zuroWa.Core.Data;
 using zuroWa.Core.Logic;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,7 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// My personal added services
 builder.Services.AddScoped<EyeMaxTmdbService>();
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
