@@ -358,3 +358,74 @@ thead th:last-child {
     opacity: 0;
     animation: 1s slideIn ease forwards;
 }
+
+/* PAGES */
+/* Index */
+#about1 {
+    width: 80%;
+    place-self: center;
+}
+
+#about1 .pixel-border2 {
+    padding: 20px;
+    margin: 20px;
+}
+
+#gif1 {
+    place-self: center;
+}
+
+#gif1 img {
+    width: 200px;
+}
+
+/*==SEARCH PAGE==*/
+
+#search-page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+#search-page .pixel-border2 {
+    padding: 20px;
+}
+
+.search-intro-box {
+    margin: 1rem 0 2rem 0;
+}
+
+.search-intro {
+    font-size: 18px;
+    color: #ECDFCC;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.search-intro a {
+    color: #b6ff00;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease;
+}
+
+.search-intro a:hover {
+    text-shadow: 0 0 10px olivedrab;
+}
+
+.search-input-group {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.search-input {
+    flex: 1;
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+}
+
+.search-btn {
+    font-size: 1rem;
+    padding: 8px 20px;
+    white-space: nowrap;
+}

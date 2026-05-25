@@ -3,12 +3,25 @@
     Layout = "_Layout";
 }
 
-<h2>TMDB Search</h2>
-
-<form action="SearchResult" method="post">
-    <div>
-        <p>Input movie name</p>
-        <input type="text" id="title" name="title">
-        <button type="submit">Search</button>
+<div id="search-page">
+    <div class="search-header slideIn1">
+        <h2 class="headerTitle">Movie Search</h2>
+        <div class="pixel-border2 search-intro-box">
+            <p class="search-intro">
+                Pulls live data from the 
+                <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">TMDB API</a> — 
+                search any movie title to get its poster, release date, overview, and more.
+            </p>
+        </div>
     </div>
-</form>
+
+    <form action="SearchResult" method="post" class="search-form slideIn1">
+        <div class="search-input-group">
+            <input type="text" id="title" name="title" 
+                   class="form-control search-input" 
+                   placeholder="e.g. Inception, Akira, The Thing..." 
+                   autocomplete="off">
+            <button type="submit" class="Pbutton-details search-btn">Search</button>
+        </div>
+    </form>
+</div>
