@@ -1,11 +1,14 @@
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Linq;
 using zuroWa.Core.Domain.EyeMax;
 
 namespace zuroWa.Core.Logic;
 
-public class EyeMaxTmdbService
+public class EyeMaxTmdbService(IConfiguration configuration)
 {
-    private const string apiKey = "50f4799410a1c57dc37e5d0e37b02f7d";
+    //private const string apiKey = "50f4799410a1c57dc37e5d0e37b02f7d";
+
+    private readonly string apiKey = configuration["EyeMax:TmdbApiKey"];
     private const string baseURL = "https://api.themoviedb.org/3";
 
     private static readonly HttpClient client = new HttpClient();
