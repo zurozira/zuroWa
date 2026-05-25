@@ -3,3 +3,5 @@ src/zuroWa.Web/appsettings.Development.json
 
 # SQLite database file
 src/zuroWa.Web/zurowa.db
+
+docs
