@@ -18,4 +18,12 @@
     <ProjectReference Include="..\zuroWa.Core\zuroWa.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Movie\Create.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Movie\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Movie\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Theater\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Theater\Index.cshtml" />
+  </ItemGroup>
+
 </Project>
