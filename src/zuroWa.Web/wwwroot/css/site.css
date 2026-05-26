@@ -379,6 +379,41 @@ thead th:last-child {
     width: 200px;
 }
 
+/*==CONTACT SECTION==*/
+#links1 {
+    place-self: center;
+}
+
+
+.contact-section {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ECDFCC;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 18px;
+    border: 2px solid #ECDFCC;
+    transition: color 0.3s ease, border-color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #b6ff00;
+    border-color: #b6ff00;
+    text-shadow: 0 0 10px olivedrab;
+}
+
+.contact-link:active {
+    transform: translateY(3px);
+}
+
 /*==SEARCH PAGE==*/
 
 #search-page {
