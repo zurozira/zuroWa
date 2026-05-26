@@ -1,4 +1,4 @@
-# zuroWa 🕹️
+# zuroWa
 
 **zuro's Web Apps** — a personal portfolio of web applications built with ASP.NET Core MVC.
 
@@ -8,14 +8,14 @@
 
 ## What is zuroWa?
 
-zuroWa is a portfolio platform where each section showcases a different web app — all built and maintained by zuro (Cong Vu). New apps get added over time, so check back!
+zuroWa is my portfolio platform where each section showcases a different web app, all built and maintained by myself. New apps get added over time, so check back!
 
 ---
 
 ## Apps
 
-### 🎬 Movie Search
-Search any movie title and get live results powered by the TMDB API — including posters, release dates, and overviews.
+### Movie Search
+Search any movie title and get live results powered by the TMDB API - including posters, release dates, and overviews.
 
 - **Route:** `/Search`
 - **API:** [The Movie Database (TMDB)](https://www.themoviedb.org/)
@@ -23,8 +23,8 @@ Search any movie title and get live results powered by the TMDB API — includin
 
 ---
 
-### 🚧 More Coming Soon
-New apps are in the works. Stay tuned.
+### More Coming Soon
+New apps are in the works.
 
 ---
 

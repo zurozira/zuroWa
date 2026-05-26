@@ -365,4 +365,4 @@
 /home/zuro/RiderProjects/zuroWa/src/zuroWa.Web/obj/Release/net10.0/zuroWa.Web.pdb
 /home/zuro/RiderProjects/zuroWa/src/zuroWa.Web/obj/Release/net10.0/zuroWa.Web.genruntimeconfig.cache
 /home/zuro/RiderProjects/zuroWa/src/zuroWa.Web/obj/Release/net10.0/ref/zuroWa.Web.dll
-/home/zuro/RiderProjects/zuroWa/src/zuroWa.Web/obj/Release/net10.0/compressed/k4o3z16r7g-{0}-dwefuf5rfy-dwefuf5rfy.gz
+/home/zuro/RiderProjects/zuroWa/src/zuroWa.Web/obj/Release/net10.0/compressed/k4o3z16r7g-{0}-xbd9q8kmqe-xbd9q8kmqe.gz
