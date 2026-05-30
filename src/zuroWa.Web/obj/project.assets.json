@@ -6374,11 +6374,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/zuro/RiderProjects/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj",
+      "projectUniqueName": "/home/zuro/myRepos/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj",
       "projectName": "zuroWa.Web",
-      "projectPath": "/home/zuro/RiderProjects/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj",
+      "projectPath": "/home/zuro/myRepos/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj",
       "packagesPath": "/home/zuro/.nuget/packages/",
-      "outputPath": "/home/zuro/RiderProjects/zuroWa/src/zuroWa.Web/obj/",
+      "outputPath": "/home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/zuro/.nuget/NuGet/NuGet.Config"
@@ -6394,8 +6394,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/home/zuro/RiderProjects/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj": {
-              "projectPath": "/home/zuro/RiderProjects/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj"
+            "/home/zuro/myRepos/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj": {
+              "projectPath": "/home/zuro/myRepos/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj"
             }
           }
         }
