@@ -1,6 +1,6 @@
 # zuroWa
 
-**zuro's Web Apps** — a personal portfolio of web applications built with ASP.NET Core MVC.
+**zuro's Web Apps** is my personal portfolio of web applications built with ASP.NET Core MVC.
 
 **Live:** [https://zurowa.azurewebsites.net](https://zurowa.azurewebsites.net)
 
