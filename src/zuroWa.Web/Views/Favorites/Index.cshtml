@@ -1,0 +1,63 @@
+@model IEnumerable<zuroWa.Core.Domain.EyeMax.Movie>
+
+@{
+    ViewBag.Title = "My favorites";
+    Layout = "_Layout";
+}
+
+@if (!Model.Any())
+{
+    <div class="movie-row pixel-border2">
+        <p>Favorite list is currently empty</p>
+    </div>
+}
+else
+{
+    <div class="movie-row pixel-border2">
+        <div class="pixel-border">
+        </div>
+        <div class="col-title">
+            Title
+        </div>
+        <div class="col-date">
+            Date added
+        </div>
+        <div class="col-desc">
+            My personal comment
+        </div>
+    </div>
+    foreach (var (item, i) in Model.Select((m, idx) => (m, idx)))
+    {
+        string poster;
+        
+        // I defined PosterPath as non-nullable in Movie.cs, so item.PosterPath != null is always true
+        // This is the correct check:
+        if (!string.IsNullOrEmpty(item.PosterPath))
+        {
+            poster = "https://image.tmdb.org/t/p/w92" + item.PosterPath;
+        }
+        else
+        {
+            poster = Url.Content("~/Images/no-image.png");
+        }
+    
+        <div class="movie-row pixel-border2" style="--delayVariable:@i">
+            <div class="pixel-border">
+                <img alt="@item.Title poster" src="@poster" onerror="this.onerror=null; this.src ='@Url.Content("~/Images/no-image.png")'">
+            </div>
+            <div class="col-title">
+                @item.Title
+            </div>
+            <div class="col-date">
+                @item.AddedAt.ToString("MMM dd, yyyy")
+            </div>
+            <div class="col-desc">
+                @(item.MyComment?.Length > 150 ? item.MyComment.Substring(0, 150) + "…" : item.MyComment ?? "No comment available.")
+            </div>
+            <form asp-action="Remove" asp-controller="Favorites" method="post">
+                <input type="hidden" name="tmdbId" value="@item.TmdbId" />
+                <button type="submit" class="btn-remove">Remove</button>
+            </form>
+        </div>
+    }
+}

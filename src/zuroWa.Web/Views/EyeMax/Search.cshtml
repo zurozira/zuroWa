@@ -8,20 +8,37 @@
         <h2 class="headerTitle">Movie Search</h2>
         <div class="pixel-border2 search-intro-box">
             <p class="search-intro">
-                Pulls live data from the 
-                <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">TMDB API</a> — 
+                Pulls live data from the
+                <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">TMDB API</a> —
                 search any movie title to get its poster, release date, overview, and more.
             </p>
         </div>
     </div>
 
-    <form action="SearchResult" method="post" class="search-form slideIn1">
+    <form action="SearchResult" method="post" class="search-form slideIn1" id="searchForm">
         <div class="search-input-group">
-            <input type="text" id="title" name="title" 
-                   class="form-control search-input" 
-                   placeholder="e.g. Inception, Akira, The Thing..." 
+            <input type="text" id="title" name="title"
+                   class="form-control search-input"
+                   placeholder="e.g. Inception, Akira, The Thing..."
                    autocomplete="off">
-            <button type="submit" class="Pbutton-details search-btn">Search</button>
+            <button type="submit" class="Pbutton-details search-btn" id="searchBtn">Search</button>
+        </div>
+        <div id="loadingIndicator" class="text-center mt-3" style="display: none;">
+            <div class="loader-wrapper">
+                <div class="loader"></div>
+            </div>
+            <p class="mt-2">Searching for movies...</p>
         </div>
     </form>
 </div>
+
+<script>
+    document.getElementById('searchForm').addEventListener('submit', function(e) {
+        // Show loading indicator
+        document.getElementById('loadingIndicator').style.display = 'block';
+        // Disable button to prevent multiple submissions
+        document.getElementById('searchBtn').disabled = true;
+        // Change button text
+        document.getElementById('searchBtn').innerHTML = 'Searching...';
+    });
+</script>

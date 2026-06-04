@@ -2,7 +2,7 @@
 
 **zuro's Web Apps** is my personal portfolio of web applications built with ASP.NET Core MVC.
 
-**Live:** [https://zurowa.azurewebsites.net](https://zurowa.azurewebsites.net)
+**Live:** [https://zurowa.azurewebsites.net](https://zurowa.azurewebsites.net) (It may take a while for the site to load first time since the server maybe idle)
 
 ---
 
@@ -14,10 +14,10 @@ zuroWa is my portfolio platform where each section showcases a different web app
 
 ## Apps
 
-### Movie Search
-Search any movie title and get live results powered by the TMDB API - including posters, release dates, and overviews.
+### EyeMax — Movie Search & Favorites
+Search any movie title and get live results powered by the TMDB API including posters, release dates, and overviews. Save movies to your personal favorites list.
 
-- **Route:** `/Search`
+- **Route:** `/EyeMax` (search), `/Favorites` (favorites)
 - **API:** [The Movie Database (TMDB)](https://www.themoviedb.org/)
 - **Status:** ✅ Live
 
@@ -35,7 +35,7 @@ New apps are in the works.
 | Framework | ASP.NET Core MVC (.NET 10) |
 | Language | C# |
 | Frontend | Razor Views, Bootstrap, custom CSS |
-| Database | SQLite |
+| Database | SQLite (EF Core) |
 | Hosting | Azure App Service (Linux, Free tier) |
 
 ---
@@ -44,13 +44,19 @@ New apps are in the works.
 
 ```
 zuroWa/
-├── zuroWa.Core/     # Shared models and services
-└── zuroWa.Web/      # ASP.NET Core MVC app
-    ├── Controllers/
-    ├── Views/
-    │   ├── Home/    # Portfolio homepage
-    │   └── Search/  # Movie Search app
-    └── appsettings.json
+├── src/
+│   ├── zuroWa.Core/              # Domain, Data, and Logic
+│   │   ├── Data/                 # AppDbContext, EF Core
+│   │   ├── Domain/EyeMax/        # Movie, TmdbMovie entities
+│   │   └── Logic/EyeMax/         # EyeMaxTmdbService, EyeMaxFavoriteService
+│   └── zuroWa.Web/               # ASP.NET Core MVC presentation tier
+│       ├── Controllers/          # EyeMaxController, FavoritesController
+│       ├── Views/
+│       │   ├── Home/             # Portfolio homepage
+│       │   ├── EyeMax/           # Movie search views
+│       │   └── Favorites/        # Favorites list view
+│       └── appsettings.json
+└── docs/                         # Local-only project notes (gitignored)
 ```
 
 ---
@@ -78,10 +84,21 @@ zuroWa/
    }
    ```
 
-3. Run:
+3. Apply database migrations:
    ```bash
-   cd src/zuroWa.Web
-   dotnet run
+   dotnet ef database update \
+     --project src/zuroWa.Core \
+     --startup-project src/zuroWa.Web
    ```
 
-4. Open `https://localhost:5001`
+4. Run:
+   ```bash
+   dotnet run --project src/zuroWa.Web
+   ```
+
+5. Open `https://localhost:5001`
+
+---
+
+## Notes
+

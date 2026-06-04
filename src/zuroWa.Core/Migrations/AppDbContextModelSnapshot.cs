@@ -15,7 +15,7 @@ namespace zuroWa.Core.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "10.0.7");
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.8");
 
             modelBuilder.Entity("zuroWa.Core.Domain.EyeMax.Movie", b =>
                 {
@@ -27,6 +27,14 @@ namespace zuroWa.Core.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("MyComment")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PosterPath")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("TmdbId")

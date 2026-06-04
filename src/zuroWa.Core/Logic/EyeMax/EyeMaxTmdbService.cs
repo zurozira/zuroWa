@@ -45,7 +45,7 @@ public class EyeMaxTmdbService(IConfiguration configuration)
                 if (!int.TryParse(result["id"].ToString(), out int id))
                     continue;
 
-                movie.Id = id;
+                movie.TmdbId = id;
                 movie.Title = result["title"]?.ToString() ?? "";
                 movie.ReleaseDate = result["release_date"]?.ToString() ?? "";
                 movie.Overview = result["overview"]?.ToString() ?? "";

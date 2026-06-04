@@ -44,6 +44,12 @@ else
             <div class="col-desc">
                 @(item.Overview?.Length > 150 ? item.Overview.Substring(0, 150) + "…" : item.Overview ?? "No description available.")
             </div>
+            <form asp-action="Add" asp-controller="Favorites" method="post">
+                <input type="hidden" name="tmdbId" value="@item.TmdbId" />
+                <input type="hidden" name="title" value="@item.Title" />
+                <input type="hidden" name="posterPath" value="@item.PosterPath" />
+                <button type="submit">♥ Add to Favorites</button>
+            </form>
         </div>
     }
 }
