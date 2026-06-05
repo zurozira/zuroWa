@@ -14,6 +14,12 @@ zuroWa is my portfolio platform where each section showcases a different web app
 
 ## Apps
 
+### Ponsai - Simple habit tracker with a cute UI
+Currently building ... Will add more info later
+
+- Route: /Ponsai
+- Status: Building
+
 ### EyeMax — Movie Search & Favorites
 Search any movie title and get live results powered by the TMDB API including posters, release dates, and overviews. Save movies to your personal favorites list.
 

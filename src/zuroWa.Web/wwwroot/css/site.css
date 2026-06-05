@@ -231,12 +231,14 @@ thead th:last-child {
     padding: 5px;
     display: inline-block;
     min-width: 100px;
+    backdrop-filter: blur(3px);
 }
 
 .pixel-border2 {
     border-image: url("../others/border_04_nobackground.png") 12 fill / 12px / 0 round;
     padding: 5px;
     display: inline-block;
+    backdrop-filter: blur(3px);
 }
 
 .movie-row {
@@ -252,7 +254,6 @@ thead th:last-child {
     animation-delay: calc(var(--delayVariable) * 0.1s);
 
     background-color: rgba(0, 0, 0, 0.4);   /* ✅ semi-transparent dark overlay */
-    backdrop-filter: blur(3px);
 }
 
 

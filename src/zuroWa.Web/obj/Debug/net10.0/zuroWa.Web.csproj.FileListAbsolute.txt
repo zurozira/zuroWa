@@ -999,7 +999,6 @@
 /home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/scopedcss/bundle/zuroWa.Web.styles.css
 /home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/scopedcss/projectbundle/zuroWa.Web.bundle.scp.css
-/home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/compressed/k4o3z16r7g-{0}-xbd9q8kmqe-xbd9q8kmqe.gz
 /home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/compressed/rsyg9sr3oe-{0}-u44e4myuqm-u44e4myuqm.gz
 /home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/compressed/e5oj0hargz-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 /home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/compressed/winq78efb5-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -1074,3 +1073,4 @@
 /home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/zuroWa.Web.pdb
 /home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/zuroWa.Web.genruntimeconfig.cache
 /home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/ref/zuroWa.Web.dll
+/home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Debug/net10.0/compressed/k4o3z16r7g-{0}-6ljragsws5-6ljragsws5.gz
