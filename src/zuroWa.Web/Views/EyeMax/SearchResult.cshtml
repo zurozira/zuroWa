@@ -28,12 +28,12 @@ else
         }
         else
         {
-            poster = Url.Content("~/Images/no-image.png");
+            poster = Url.Content("~/images/no-image.png");
         }
     
         <div class="movie-row pixel-border2" style="--delayVariable:@i">
             <div class="pixel-border">
-                <img alt="@item.Title poster" src="@poster" onerror="this.onerror=null; this.src ='@Url.Content("~/Images/no-image.png")'">
+                <img alt="@item.Title poster" src="@poster" onerror="this.onerror=null; this.src ='@Url.Content("~/images/no-image.png")'">
             </div>
             <div class="col-title">
                 @item.Title

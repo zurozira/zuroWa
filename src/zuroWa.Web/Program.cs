@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using zuroWa.Core.Data;
 using zuroWa.Core.Logic;
 using zuroWa.Core.Logic.EyeMax;
+using zuroWa.Core.Logic.Ponsai;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,9 +17,12 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<EyeMaxFavoriteService>();
 
+// After building PonsaiService, I add it here as well
+builder.Services.AddScoped<PonsaiService>();
+
 var app = builder.Build();
 
-// This ensure the Movies table gets created on Azure on first run
+// This ensures the Movies table gets created on Azure on first run
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();

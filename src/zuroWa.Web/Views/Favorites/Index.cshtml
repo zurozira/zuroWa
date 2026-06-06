@@ -5,6 +5,10 @@
     Layout = "_Layout";
 }
 
+<div class="container headerTitle text-center">
+    <h1>My favorite list</h1>
+</div>
+
 @if (!Model.Any())
 {
     <div class="movie-row pixel-border2">
@@ -13,19 +17,6 @@
 }
 else
 {
-    <div class="movie-row pixel-border2">
-        <div class="pixel-border">
-        </div>
-        <div class="col-title">
-            Title
-        </div>
-        <div class="col-date">
-            Date added
-        </div>
-        <div class="col-desc">
-            My personal comment
-        </div>
-    </div>
     foreach (var (item, i) in Model.Select((m, idx) => (m, idx)))
     {
         string poster;
@@ -40,24 +31,26 @@ else
         {
             poster = Url.Content("~/Images/no-image.png");
         }
-    
-        <div class="movie-row pixel-border2" style="--delayVariable:@i">
-            <div class="pixel-border">
-                <img alt="@item.Title poster" src="@poster" onerror="this.onerror=null; this.src ='@Url.Content("~/Images/no-image.png")'">
+        
+        <div class="favorite-row">
+            <div class="movie-row pixel-border2" style="--delayVariable:@i">
+                <div class="pixel-border text-center">
+                    <img alt="@item.Title poster" src="@poster" onerror="this.onerror=null; this.src ='@Url.Content("~/Images/no-image.png")'">
+                </div>
+                <div class="col-title">
+                    @item.Title
+                </div>
+                <div class="col-date">
+                    @item.AddedAt.ToString("MMM dd, yyyy")
+                </div>
+                <div class="col-desc">
+                    @(item.MyComment?.Length > 150 ? item.MyComment.Substring(0, 150) + "…" : item.MyComment ?? "No comment available.")
+                </div>
+                <form asp-action="Remove" asp-controller="Favorites" method="post">
+                    <input type="hidden" name="tmdbId" value="@item.TmdbId" />
+                    <button type="submit" class="btn-remove">Remove</button>
+                </form>
             </div>
-            <div class="col-title">
-                @item.Title
-            </div>
-            <div class="col-date">
-                @item.AddedAt.ToString("MMM dd, yyyy")
-            </div>
-            <div class="col-desc">
-                @(item.MyComment?.Length > 150 ? item.MyComment.Substring(0, 150) + "…" : item.MyComment ?? "No comment available.")
-            </div>
-            <form asp-action="Remove" asp-controller="Favorites" method="post">
-                <input type="hidden" name="tmdbId" value="@item.TmdbId" />
-                <button type="submit" class="btn-remove">Remove</button>
-            </form>
         </div>
     }
 }

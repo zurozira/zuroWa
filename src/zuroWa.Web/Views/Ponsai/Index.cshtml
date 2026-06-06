@@ -1,13 +1,141 @@
+@model List<zuroWa.Core.Domain.Ponsai.HabitsWithStreak>
+
 @{
     ViewBag.Title = "Ponsai (Habit Tracker)";
     Layout = "_Layout";
 }
 
 <div class="container headerTitle text-center">
-    <h1 class="display-4">Ponsai</h1>
-    <p>A simple habit tracker</p>
+    <h1>Ponsai: a habit tracking app</h1>
 </div>
 
-<div class="pixel-border2 slideIn1">
-    Status: Currently building ...
-</div>
+@if (!Model.Any())
+{
+    <div class="movie-row pixel-border2">
+        <p>No habits yet</p>
+        <p>Click "Add a new habit" to start your journey today</p>
+    </div>
+}
+else
+{
+    <div class="habit-row pixel-border2">
+        <div class="col-habit">
+            Emoji
+        </div>
+        <div class="col-habit">
+            Name
+        </div>
+        <div class="col-habit">
+            Streak
+        </div>
+        <div class="col-habit">
+            Progress
+        </div>
+        <div class="col-habit">
+        </div>
+    </div>
+    
+    foreach (var (item, i) in Model.Select((m, idx) => (m, idx)))
+    {
+        string stageClass;
+        string stageImage;
+        if (item.Streak == 0)
+        {
+            stageClass = "stage-seed";
+            stageImage = "bonsai-1.png";
+        }
+        else if (item.Streak == 1 || item.Streak == 2)
+        {
+            stageClass = "stage-sprout";
+            stageImage = "bonsai-2.png";
+        }
+        else if (item.Streak >= 3 && item.Streak <= 6)
+        {
+            stageClass = "stage-sapling";
+            stageImage = "bonsai-3.png";
+        }
+        else if (item.Streak >= 7 && item.Streak <= 13)
+        {
+            stageClass = "stage-young";
+            stageImage = "bonsai-4.png";
+        }
+        else
+        {
+            stageClass = "stage-bonsai";
+            stageImage = "bonsai-5.png";
+        }
+
+        stageImage = Url.Content("~/images/ponsai/" + stageImage);
+        
+        <div class="habit-row pixel-border2" style="--delayVariable:@i">
+            <div class="col-habit">
+                @item.Habit.Emoji
+            </div>
+            
+            <div class="col-habit">
+                @item.Habit.Name
+            </div>
+            
+            <div class="col-habit">
+                @item.Streak
+            </div>
+            
+            <div class="col-habit plant">
+                <div class="pixel-border plant @stageClass">
+                    <img src="@stageImage" alt="@stageClass">
+                </div>
+            </div>
+            
+            <form class="col-habit" method="post" asp-controller="Ponsai" asp-action="LogToday">
+                <input type="hidden" name="habitId" value="@item.Habit.Id">
+                <button type="submit" @(item.LoggedToday ? "disabled" : "")>
+                    @(item.LoggedToday ? "✅ Logged" : "Log today")
+                </button>
+            </form>
+        </div>
+    }
+}
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@1/index.js"></script>
+
+<form method="post" asp-controller="Ponsai" asp-action="AddHabit">
+    <div class="container habit-form">
+        <div class="row">
+            <div class="col-6">
+                New habit name:
+            </div>
+            <div class="col-6">
+                <input class="habit-input-text" type="text" name="name" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                Emoji:
+            </div>
+            <div class="col-6">
+                <input class="habit-input-text" type="text" name="emoji" id="emojiInput" placeholder="Click to pick" readonly>
+                <emoji-picker style="display:none;" id="picker"></emoji-picker>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <button type="submit" class="add-habit-btn">Add a new habit</button>
+            </div>
+            
+        </div>
+    </div>
+</form>
+
+<script>
+    const input = document.getElementById('emojiInput');
+    const picker = document.getElementById('picker');
+
+    input.addEventListener('click', () => {
+        picker.style.display = picker.style.display === 'none' ? 'block' : 'none';
+    });
+
+    picker.addEventListener('emoji-click', e => {
+        input.value = e.detail.unicode;
+        picker.style.display = 'none';
+    });
+</script>

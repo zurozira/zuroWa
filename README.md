@@ -2,23 +2,24 @@
 
 **zuro's Web Apps** is my personal portfolio of web applications built with ASP.NET Core MVC.
 
-**Live:** [https://zurowa.azurewebsites.net](https://zurowa.azurewebsites.net) (It may take a while for the site to load first time since the server maybe idle)
+**Live:** [https://zurowa.azurewebsites.net](https://zurowa.azurewebsites.net) *(Free tier — may take a moment to wake up)*
 
 ---
 
 ## What is zuroWa?
 
-zuroWa is my portfolio platform where each section showcases a different web app, all built and maintained by myself. New apps get added over time, so check back!
+zuroWa is my portfolio platform where each section showcases a different web app, all built and maintained by me. New apps get added over time.
 
 ---
 
 ## Apps
 
-### Ponsai - Simple habit tracker with a cute UI
-Currently building ... Will add more info later
+### Ponsai — Habit Tracker
+Track daily habits with a visual bonsai tree that grows with your streak. Log a habit each day to watch your tree grow from a seed to a full bonsai. Miss a day and the streak resets.
 
-- Route: /Ponsai
-- Status: Building
+- **Route:** `/Ponsai`
+- **Status:** ✅ Live
+- **Tech:** SQLite, EF Core
 
 ### EyeMax — Movie Search & Favorites
 Search any movie title and get live results powered by the TMDB API including posters, release dates, and overviews. Save movies to your personal favorites list.
@@ -42,7 +43,7 @@ New apps are in the works.
 | Language | C# |
 | Frontend | Razor Views, Bootstrap, custom CSS |
 | Database | SQLite (EF Core) |
-| Hosting | Azure App Service (Linux, Free tier) |
+| Hosting | Azure App Service (Linux, Free F1 tier) |
 
 ---
 
@@ -52,16 +53,23 @@ New apps are in the works.
 zuroWa/
 ├── src/
 │   ├── zuroWa.Core/              # Domain, Data, and Logic
-│   │   ├── Data/                 # AppDbContext, EF Core
-│   │   ├── Domain/EyeMax/        # Movie, TmdbMovie entities
-│   │   └── Logic/EyeMax/         # EyeMaxTmdbService, EyeMaxFavoriteService
+│   │   ├── Data/                 # AppDbContext, EF Core migrations
+│   │   ├── Domain/
+│   │   │   ├── EyeMax/           # Movie, TmdbMovie entities
+│   │   │   └── Ponsai/           # Habit, HabitLog entities
+│   │   └── Logic/
+│   │       ├── EyeMax/           # EyeMaxTmdbService, EyeMaxFavoriteService
+│   │       └── Ponsai/           # PonsaiService, HabitsWithStreak
 │   └── zuroWa.Web/               # ASP.NET Core MVC presentation tier
-│       ├── Controllers/          # EyeMaxController, FavoritesController
+│       ├── Controllers/          # EyeMaxController, FavoritesController,
+│       │                         # HomeController, PonsaiController
 │       ├── Views/
 │       │   ├── Home/             # Portfolio homepage
 │       │   ├── EyeMax/           # Movie search views
-│       │   └── Favorites/        # Favorites list view
-│       └── appsettings.json
+│       │   ├── Favorites/        # Favorites list view
+│       │   └── Ponsai/           # Habit tracker views
+│       └── wwwroot/
+│           └── images/ponsai/    # Bonsai growth stage sprites (bonsai-1..5.png)
 └── docs/                         # Local-only project notes (gitignored)
 ```
 
@@ -103,8 +111,3 @@ zuroWa/
    ```
 
 5. Open `https://localhost:5001`
-
----
-
-## Notes
-

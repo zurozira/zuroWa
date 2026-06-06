@@ -89,17 +89,7 @@ footer .container {
     animation: fadeIn2 2s ease forwards;
 }
 
-@keyframes fadeIn2 {
-    from {
-        opacity: 0;
-        transform: translateY(-15px);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 /*==TABLE==*/
 
@@ -279,9 +269,9 @@ thead th:last-child {
 .Pbutton-details {
     color: #fff;
     background-color: #c1c019;
-    padding: 5px 10px 5px 10px;
+    padding: 2px 5px 2px 5px;
     font-size: 12px;
-    border: 2px solid #ecdfcc;
+    border: 1px solid #ecdfcc;
     cursor: pointer;
     text-decoration: none;
 }
@@ -327,33 +317,8 @@ thead th:last-child {
     font-style: italic;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(40px);
 
-    }
-    to {
-        opacity: 100%;
-        transform: translateX(0);
 
-    }
-}
-.fadeIn1 {
-    opacity: 0;
-    animation: 1s fadeIn ease forwards;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
 .slideIn1 {
     opacity: 0;
@@ -464,4 +429,138 @@ thead th:last-child {
     font-size: 1rem;
     padding: 8px 20px;
     white-space: nowrap;
+}
+
+/* FAVORITE */
+.favorite-row .movie-row {
+    width: 70%;
+    place-self: center;
+}
+
+/* PONSAI */
+
+.plant img {
+    image-rendering: pixelated;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+}
+
+.habit-row {
+    place-self: center;
+    display:flex;
+    width: 60%;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+
+    opacity: 0;
+
+    animation: fadeIn 1s ease forwards;
+    animation-delay: calc(var(--delayVariable) * 0.1s);
+
+    background-color: rgba(0, 0, 0, 0.4);   /* ✅ semi-transparent dark overlay */
+}
+
+.col-habit {
+    place-self: center;
+    align-self: center;
+    text-align: center;
+    width: 130px;
+}
+
+.habit-form {
+    align-self: center;
+    width: 350px;
+    animation: slideIn2 1.5s ease forwards;
+}
+
+.habit-form .row {
+    margin: 10px;
+}
+
+.add-habit-btn {
+    color: #fff;
+    background-color: #c1c019;
+    padding: 1px 3px 1px 3px;
+    font-size: 16px;
+    border: 1px solid #ecdfcc;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100px;
+    border-radius: 8px;
+}
+
+.habit-input-text {
+    background-color: #2b3035;
+    color: #c1c019;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.habit-input-text:focus {
+    outline: none;
+    border-color: #b6ff00;
+    box-shadow: 0 0 0 0.2rem #b6ff00;
+}
+
+emoji-picker {
+    width: 400px;
+    height: 300px;
+    --border-radius: 10px;
+    --emoji-size: 1rem;
+}
+
+/*KEYFRAMES*/
+
+@keyframes fadeIn2 {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0);
+
+    }
+}
+.fadeIn1 {
+    opacity: 0;
+    animation: 1s fadeIn ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn2 {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
