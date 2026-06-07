@@ -14,14 +14,18 @@ zuroWa is my portfolio platform where each section showcases a different web app
 
 ## Apps
 
-### Ponsai — Habit Tracker
+### ZicZacZu: A Simple PvP TicTacToe
+A simple TicTacToe game to play with friend, anytime.
+Status: Building...
+
+### Ponsai: Habit Tracker
 Track daily habits with a visual bonsai tree that grows with your streak. Log a habit each day to watch your tree grow from a seed to a full bonsai. Miss a day and the streak resets.
 
 - **Route:** `/Ponsai`
 - **Status:** ✅ Live
 - **Tech:** SQLite, EF Core
 
-### EyeMax — Movie Search & Favorites
+### EyeMax: Movie Search & Favorites
 Search any movie title and get live results powered by the TMDB API including posters, release dates, and overviews. Save movies to your personal favorites list.
 
 - **Route:** `/EyeMax` (search), `/Favorites` (favorites)
@@ -52,25 +56,24 @@ New apps are in the works.
 ```
 zuroWa/
 ├── src/
-│   ├── zuroWa.Core/              # Domain, Data, and Logic
-│   │   ├── Data/                 # AppDbContext, EF Core migrations
-│   │   ├── Domain/
-│   │   │   ├── EyeMax/           # Movie, TmdbMovie entities
-│   │   │   └── Ponsai/           # Habit, HabitLog entities
-│   │   └── Logic/
-│   │       ├── EyeMax/           # EyeMaxTmdbService, EyeMaxFavoriteService
-│   │       └── Ponsai/           # PonsaiService, HabitsWithStreak
-│   └── zuroWa.Web/               # ASP.NET Core MVC presentation tier
-│       ├── Controllers/          # EyeMaxController, FavoritesController,
-│       │                         # HomeController, PonsaiController
-│       ├── Views/
-│       │   ├── Home/             # Portfolio homepage
-│       │   ├── EyeMax/           # Movie search views
-│       │   ├── Favorites/        # Favorites list view
-│       │   └── Ponsai/           # Habit tracker views
-│       └── wwwroot/
-│           └── images/ponsai/    # Bonsai growth stage sprites (bonsai-1..5.png)
-└── docs/                         # Local-only project notes (gitignored)
+   ├── zuroWa.Core/              # Domain, Data, and Logic
+   │   ├── Data/                 # AppDbContext, EF Core migrations
+   │   ├── Domain/
+   │   │   ├── EyeMax/           # Movie, TmdbMovie entities
+   │   │   └── Ponsai/           # Habit, HabitLog entities
+   │   └── Logic/
+   │       ├── EyeMax/           # EyeMaxTmdbService, EyeMaxFavoriteService
+   │       └── Ponsai/           # PonsaiService, HabitsWithStreak
+   └── zuroWa.Web/               # ASP.NET Core MVC presentation tier
+       ├── Controllers/          # EyeMaxController, FavoritesController,
+       │                         # HomeController, PonsaiController
+       ├── Views/
+          ├── Home/             # Portfolio homepage
+          ├── EyeMax/           # Movie search views
+          ├── Favorites/        # Favorites list view
+          └── Ponsai/           # Habit tracker views
+       
+
 ```
 
 ---

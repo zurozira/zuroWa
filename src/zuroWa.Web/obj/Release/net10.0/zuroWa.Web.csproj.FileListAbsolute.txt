@@ -733,4 +733,4 @@
 /home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Release/net10.0/zuroWa.Web.pdb
 /home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Release/net10.0/zuroWa.Web.genruntimeconfig.cache
 /home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Release/net10.0/ref/zuroWa.Web.dll
-/home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Release/net10.0/compressed/k4o3z16r7g-{0}-2wz68de6jx-2wz68de6jx.gz
+/home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/Release/net10.0/compressed/k4o3z16r7g-{0}-6i2cme18bu-6i2cme18bu.gz

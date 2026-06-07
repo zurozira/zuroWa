@@ -5,7 +5,7 @@
     Layout = "_Layout";
 }
 
-<div class="container headerTitle text-center">
+<div class="headerTitle text-center">
     <h1>Ponsai: a habit tracking app</h1>
 </div>
 
@@ -27,11 +27,12 @@ else
         </div>
         <div class="col-habit">
             Streak
-        </div>
-        <div class="col-habit">
+        </div> 
+        <div class="col-habit col-plant">
             Progress
         </div>
-        <div class="col-habit">
+        <div class="col-habit col-action">
+            Action
         </div>
     </div>
     
@@ -69,7 +70,7 @@ else
         
         <div class="habit-row pixel-border2" style="--delayVariable:@i">
             <div class="col-habit">
-                @item.Habit.Emoji
+                @(string.IsNullOrEmpty(item.Habit.Emoji) ? "🌿" : item.Habit.Emoji)
             </div>
             
             <div class="col-habit">
@@ -80,13 +81,13 @@ else
                 @item.Streak
             </div>
             
-            <div class="col-habit plant">
+            <div class="col-habit col-plant">
                 <div class="pixel-border plant @stageClass">
                     <img src="@stageImage" alt="@stageClass">
                 </div>
             </div>
             
-            <form class="col-habit" method="post" asp-controller="Ponsai" asp-action="LogToday">
+            <form class="col-habit col-action" method="post" asp-controller="Ponsai" asp-action="LogToday">
                 <input type="hidden" name="habitId" value="@item.Habit.Id">
                 <button type="submit" @(item.LoggedToday ? "disabled" : "")>
                     @(item.LoggedToday ? "✅ Logged" : "Log today")
@@ -99,7 +100,7 @@ else
 <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@1/index.js"></script>
 
 <form method="post" asp-controller="Ponsai" asp-action="AddHabit">
-    <div class="container habit-form">
+    <div class="container habit-form slideIn1">
         <div class="row">
             <div class="col-6">
                 New habit name:

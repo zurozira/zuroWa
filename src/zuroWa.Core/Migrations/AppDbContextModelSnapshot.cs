@@ -86,15 +86,55 @@ namespace zuroWa.Core.Migrations
                     b.ToTable("HabitLogs");
                 });
 
+            modelBuilder.Entity("zuroWa.Core.Domain.ZicZacZu.Game", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("BoardState")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("GameStatus")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("PlayerOCode")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<char>("PlayerTurn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PlayerXCode")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<char?>("Winner")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Games");
+                });
+
             modelBuilder.Entity("zuroWa.Core.Domain.Ponsai.HabitLog", b =>
                 {
                     b.HasOne("zuroWa.Core.Domain.Ponsai.Habit", "Habit")
-                        .WithMany()
+                        .WithMany("HabitLogs")
                         .HasForeignKey("HabitId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Habit");
+                });
+
+            modelBuilder.Entity("zuroWa.Core.Domain.Ponsai.Habit", b =>
+                {
+                    b.Navigation("HabitLogs");
                 });
 #pragma warning restore 612, 618
         }
