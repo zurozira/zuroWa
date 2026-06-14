@@ -14,9 +14,13 @@ zuroWa is my portfolio platform where each section showcases a different web app
 
 ## Apps
 
-### ZicZacZu: A Simple PvP TicTacToe
-A simple TicTacToe game to play with friend, anytime.
-Status: Building...
+### ZicZacZu: Async PvP Tic-Tac-Toe
+A turn-based Tic-Tac-Toe game to play with a friend, anytime. Create a game, share a code, and take turns on your own schedule  (no real-time required).
+
+- **Route:** `/ZicZacZu`
+- **Status:** ✅ Live 
+- **Tech:** SQLite, EF Core, jQuery
+- **Rules:** 5×5 grid, 4-in-a-row wins
 
 ### Ponsai: Habit Tracker
 Track daily habits with a visual bonsai tree that grows with your streak. Log a habit each day to watch your tree grow from a seed to a full bonsai. Miss a day and the streak resets.
@@ -35,7 +39,9 @@ Search any movie title and get live results powered by the TMDB API including po
 ---
 
 ### More Coming Soon
-New apps are in the works.
+- Member portal with authentication and roles
+- Per-user Favorites and Ponsai data
+- Guestbook — leave a message
 
 ---
 
@@ -60,20 +66,22 @@ zuroWa/
    │   ├── Data/                 # AppDbContext, EF Core migrations
    │   ├── Domain/
    │   │   ├── EyeMax/           # Movie, TmdbMovie entities
-   │   │   └── Ponsai/           # Habit, HabitLog entities
+   │   │   ├── Ponsai/           # Habit, HabitLog entities
+   │   │   └── ZicZacZu/         # Game entity
    │   └── Logic/
    │       ├── EyeMax/           # EyeMaxTmdbService, EyeMaxFavoriteService
-   │       └── Ponsai/           # PonsaiService, HabitsWithStreak
+   │       ├── Ponsai/           # PonsaiService, HabitsWithStreak
+   │       └── ZicZacZu/         # ZicZacZuService
    └── zuroWa.Web/               # ASP.NET Core MVC presentation tier
        ├── Controllers/          # EyeMaxController, FavoritesController,
-       │                         # HomeController, PonsaiController
+       │                         # HomeController, PonsaiController,
+       │                         # ZicZacZuController
        ├── Views/
           ├── Home/             # Portfolio homepage
           ├── EyeMax/           # Movie search views
           ├── Favorites/        # Favorites list view
-          └── Ponsai/           # Habit tracker views
-       
-
+          ├── Ponsai/           # Habit tracker views
+          └── ZicZacZu/         # Game lobby + session views
 ```
 
 ---

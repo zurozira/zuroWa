@@ -1,6 +1,6 @@
 
 @{
-    ViewBag.Title = "Ponsai (Habit Tracker)";
+    ViewBag.Title = "ZicZacZu";
     Layout = "_Layout";
 }
 
@@ -8,6 +8,36 @@
     <h1>ZicZacZu: PvP TicTacToe</h1>
 </div>
 
-<div class="habit-row pixel-border2">
-    Currently working on...
-</div>
+<form method="post" asp-controller="ZicZacZu" asp-action="Create">
+    <div class="zzzbutton-container zzzcreate slideIn1">
+        <button class="animated-button2">
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="text">Create a new game</span>
+            <span class="circle"></span>
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </div>
+</form>
+
+<form method="get" asp-controller="ZicZacZu" asp-action="Session">
+    <div class="zzzbutton-container zzzjoin">
+        <input type="text" id="code" name="code" placeholder="Enter code">
+        
+        <button class="animated-button">
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+            </svg>
+            <span class="text">Join a game</span>
+            <span class="circle"></span>
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+            </svg>
+        </button>
+    </div>
+</form>

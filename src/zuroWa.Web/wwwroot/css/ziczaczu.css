@@ -1,0 +1,108 @@
+.zzzbutton-container {
+    max-width: 350px;
+    padding: 10px 10px;
+    place-self: center;
+}
+
+
+.zzzbutton-container input[type="text"] {
+    background-color: #2b3035;
+    color: #c1c019;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    max-width: 100px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    
+    padding-left: 10px;
+}
+
+.zzzbutton-container input[type="text"]:focus {
+    outline: none;
+    border: 1px solid #b6ff00;
+    box-shadow: 0 0 0 0.2rem #b6ff00;
+}
+
+.zzzbutton-container input[type="text"]::placeholder {
+    padding-left: 10px;
+    font-size: 10pt;
+} 
+
+.zzzjoin {
+    animation: fadeIn 1s ease forwards;
+}
+
+.session-game {
+    max-width: 800px;
+    place-self: center;
+    padding: 20px;
+}
+
+.session-playerX-info, .session-playerO-info {
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.session-playerX-info {
+    border: 1px solid #b6ff00;
+}
+
+.session-playerX-info-turn {
+    background: #b6ff00;
+    color: black;
+}
+
+.session-playerO-info {
+    border: 1px solid coral;
+    text-align: end;
+}
+
+.session-playerO-info-turn {
+    background: coral;
+    color: black;
+}
+
+.session-status-info {
+    width: fit-content;
+    place-self: center;
+    margin: 10px;
+}
+
+.session-board {
+    padding: 10px;
+    background: transparent;
+}
+
+.d-grid {
+    grid-template-columns: repeat(5, 1fr);
+    /*gap: 0.5rem;*/
+}
+
+.session-cell {
+    aspect-ratio: 1;
+    width: 3rem;
+    backdrop-filter: blur(3px);
+    border: 1px solid #ECDFCC;
+    font-size: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition: 0.3s;
+}
+
+.session-cell-unlocked:hover {
+    background: #b6ff00;
+}
+
+.session-cell-selected {
+    color: coral;
+}
+
+.session-bottom-status {
+    width: fit-content;
+    place-self: center;
+    text-align: center;
+}

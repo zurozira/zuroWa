@@ -1,0 +1,208 @@
+@using zuroWa.Core.Domain.ZicZacZu
+@model zuroWa.Core.Domain.ZicZacZu.Game
+
+
+@{
+    ViewBag.Title = "Session";
+    Layout = "_Layout";
+    
+    // [Razor View - HTML]          [JavaScript]           [.NET Controller]
+
+    // <div data-index="7">   →   reads data-index    →   hidden input value
+    // <input type="hidden"   ←   sets .val()         →   form POST sends it
+    // name="cellIndex">                                 MakeMoveAsync receives it
+}
+
+<div class="container headerTitle text-center">
+    <h1>ZicZacZu</h1>
+</div>
+
+<div class="session-game">
+    
+    <div class="session-player-info container">
+        <div class="row">
+            <div class="col-6">
+                
+                @if (Model.PlayerTurn == 'X')
+                {
+                    <div class="session-playerX-info session-playerX-info-turn">
+                        Player X <br/>
+                        @Model.PlayerXCode
+                    </div>
+                }
+                else
+                {
+                    <div class="session-playerX-info">
+                        Player X <br/>
+                        @Model.PlayerXCode
+                    </div>
+                }
+                
+            </div>
+        
+
+            <div class=" col-6">
+                @if (Model.PlayerTurn == 'O')
+                {
+                    <div class="session-playerO-info session-playerO-info-turn">
+                        Player O <br/>
+                        @Model.PlayerOCode
+                    </div>
+                }
+                else
+                {
+                    <div class="session-playerO-info">
+                        Player O <br/>
+                        @Model.PlayerOCode
+                    </div>
+                }
+            </div>
+        </div>
+        
+        <div class="session-status-info col-12 text-center">
+            Status: @Model.GameStatus <br/>
+            Turn: Player @Model.PlayerTurn
+        </div>
+    </div>
+    
+    <div class="session-board d-grid">
+        <input type="hidden" id="initialBoard" value="@Model.BoardState"/>
+
+        @for (int i = 0; i < 25; i++)
+        {
+            if (Model.BoardState[i] == 'X')
+            {
+                <div class="session-cell session-cell-locked" data-index="@i">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+            }
+            else if (Model.BoardState[i] == 'O')
+            {
+                <div class="session-cell session-cell-locked" data-index="@i">
+                    <i class="fa-solid fa-o"></i>
+                </div>
+            }
+            else
+            {
+                <div class="session-cell session-cell-unlocked" data-index="@i">
+                    <i class="fa-solid"></i>
+                </div>
+            }
+        }
+    </div>
+    
+    @if (Model.GameStatus == Game.Status.Finished)
+    {
+        <div>
+            @if (Model.Winner == null)
+            {
+                <div class="session-bottom-status" style="font-size: 2rem">
+                    It's a draw
+                </div>
+            }
+            else
+            {
+                <div class="session-bottom-status" style="font-size: 2rem">
+                    Player @Model.Winner wins!
+                </div>
+            }
+        </div>
+        }
+        else if (Model.GameStatus == Game.Status.Waiting)
+        {
+            <div class="session-bottom-status">
+                Waiting for the other player... <br/>
+                Send your friend Player O code to join
+            </div>
+        }
+        else if ((Model.PlayerTurn == 'X' && Context.Request.Query["code"] == Model.PlayerXCode)
+        || (Model.PlayerTurn == 'O' && Context.Request.Query["code"] == Model.PlayerOCode))
+        {
+        <form method="post" asp-controller="ZicZacZu" asp-action="Move">
+            <input type="hidden" name="code" value="@Context.Request.Query["code"]">
+            <input type="hidden" name="cellIndex" id="cellIndex" value="">
+            <div class="session-move">
+                <div class="zzzbutton-container">
+
+                    <button class="animated-button zzzmove">
+                        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                        </svg>
+                        <span class="text">Proceed</span>
+                        <span class="circle"></span>
+                        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </form>
+        }
+        else
+        {
+        <div class="session-bottom-status text-center">
+            Waiting for the other player to make a move... <br/>
+            (Refresh page to see change)
+        </div>
+        }
+</div>
+
+<script src="https://code.jquery.com/jquery-4.0.0.slim.js" integrity="sha256-M+GjhMBfXikM1izMplICCTscIj5hzPCp6uDzaypxtgg=" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+        
+        // Disable proceed button if not yet select a move
+        $(".zzzmove").prop("disabled", true);
+        const currentPlayer = '@Model.PlayerTurn';
+        
+        // Put X O and remove X O when clicked
+        $(".session-cell-unlocked").on("click", function() {
+            $(".session-cell-selected")
+                .removeClass("session-cell-selected")
+                .find("i")
+                .removeClass("fa-xmark fa-o");
+            
+            $(this).addClass("session-cell-selected");
+            
+            $(this)
+                .find("i")
+                .addClass(currentPlayer === 'X' ? "fa-xmark" : "fa-o");
+
+            // Put data in cellIndex when select
+            let index = $(this).data("index");
+            $("#cellIndex").val(index);
+            
+            // Enable proceed button once selecting a move
+            $(".zzzmove").prop("disabled", false);
+        })
+
+        // AUTO RELOAD PAGE WHEN A MOVE IS MADE: For now set 10s because Im on free tier azure T.T
+        const initialBoard = $("#initialBoard").val();
+        const code = '@Context.Request.Query["code"]';
+        
+        if ('@Model.GameStatus.ToString()' === 'InProgress') {
+            const interval = setInterval(() => {
+                fetch("/ZicZacZu/GetStatus?code=" + code)
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.gameStatus === 'Finished') {
+                            clearInterval(interval);
+                        }
+                        if (data.boardState !== initialBoard) {
+                            clearInterval(interval);
+                            location.reload();
+                        }
+                    });
+            }, 10000);
+        }
+    })
+</script>
+
+
+
+
+

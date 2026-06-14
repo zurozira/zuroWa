@@ -3,6 +3,7 @@ using zuroWa.Core.Data;
 using zuroWa.Core.Logic;
 using zuroWa.Core.Logic.EyeMax;
 using zuroWa.Core.Logic.Ponsai;
+using zuroWa.Core.Logic.ZicZacZu;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,9 @@ builder.Services.AddScoped<EyeMaxFavoriteService>();
 
 // After building PonsaiService, I add it here as well
 builder.Services.AddScoped<PonsaiService>();
+
+// ZicZacZu service
+builder.Services.AddScoped<ZicZacZuService>();
 
 var app = builder.Build();
 

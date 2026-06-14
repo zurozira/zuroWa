@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("zuroWa.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40593b7ed4b921a068e01d99bd31c8e9b872f2b3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+046a2077639c667415f0948c4bf0ec9d5685790d")]
 [assembly: System.Reflection.AssemblyProductAttribute("zuroWa.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("zuroWa.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
