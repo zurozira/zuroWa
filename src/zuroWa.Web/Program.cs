@@ -44,14 +44,6 @@ builder.Services.AddScoped<ZicZacZuService>();
 
 var app = builder.Build();
 
-// This ensures the Tables gets created on Azure on first run
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.Migrate();
-    await AppSeeder.SeedAsync(scope.ServiceProvider);
-}
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -66,4 +58,19 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
+
+// DB startup — wrapped so a failure doesn't crash the container
+try
+{
+    using var scope = app.Services.CreateScope();
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
+    await AppSeeder.SeedAsync(scope.ServiceProvider);
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Startup DB error: {ex.Message}");
+}
+
+
 app.Run();

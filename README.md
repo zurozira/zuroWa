@@ -2,7 +2,7 @@
 
 **zuro's Web Apps** is my personal portfolio of web applications built with ASP.NET Core MVC.
 
-**Live:** [https://zurowa.azurewebsites.net](https://zurowa.azurewebsites.net) *(Free tier ~ may take a moment to wake up, I will upgrade soon)*
+**Live:** [https://zurowa.azurewebsites.net](https://zurowa.azurewebsites.net) *(B1 Tier and I will get a proper domain soon :)*
 
 ***
 
@@ -62,7 +62,7 @@ Register or log in at `/Account/Login` to unlock per-user features.
 | Language | C# |
 | Frontend | Razor Views, Bootstrap, custom CSS |
 | Database | SQLite (EF Core) |
-| Hosting | Azure App Service (Linux, Free F1 tier) |
+| Hosting | Azure App Service (Linux, B1 tier) |
 
 ***
 
