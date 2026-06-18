@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("zuroWa.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+046a2077639c667415f0948c4bf0ec9d5685790d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eaf012a5f7584133e0c636c31703b509ffad88cb")]
 [assembly: System.Reflection.AssemblyProductAttribute("zuroWa.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("zuroWa.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

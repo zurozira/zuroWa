@@ -6,102 +6,111 @@
 }
 
 <div class="headerTitle text-center">
-    <h1>Ponsai: a habit tracking app</h1>
+    <h1>Ponsai: habit tracker</h1>
 </div>
 
-@if (!Model.Any())
+@if (!User.Identity?.IsAuthenticated == true)
 {
-    <div class="movie-row pixel-border2">
-        <p>No habits yet</p>
-        <p>Click "Add a new habit" to start your journey today</p>
+    <div class="description-box pixel-border2 slideIn2">
+        Track your habits with Ponsai 🌱 <br/>
+        Log in to start building your streaks
     </div>
 }
 else
 {
-    <div class="habit-row pixel-border2">
-        <div class="col-habit">
-            Emoji
-        </div>
-        <div class="col-habit">
-            Name
-        </div>
-        <div class="col-habit">
-            Streak
-        </div> 
-        <div class="col-habit col-plant">
-            Progress
-        </div>
-        <div class="col-habit col-action">
-            Action
-        </div>
-    </div>
-    
-    foreach (var (item, i) in Model.Select((m, idx) => (m, idx)))
+    if (!Model.Any())
     {
-        string stageClass;
-        string stageImage;
-        if (item.Streak == 0)
-        {
-            stageClass = "stage-seed";
-            stageImage = "bonsai-1.png";
-        }
-        else if (item.Streak == 1 || item.Streak == 2)
-        {
-            stageClass = "stage-sprout";
-            stageImage = "bonsai-2.png";
-        }
-        else if (item.Streak >= 3 && item.Streak <= 6)
-        {
-            stageClass = "stage-sapling";
-            stageImage = "bonsai-3.png";
-        }
-        else if (item.Streak >= 7 && item.Streak <= 13)
-        {
-            stageClass = "stage-young";
-            stageImage = "bonsai-4.png";
-        }
-        else
-        {
-            stageClass = "stage-bonsai";
-            stageImage = "bonsai-5.png";
-        }
-
-        stageImage = Url.Content("~/images/ponsai/" + stageImage);
-        
-        <div class="habit-row pixel-border2" style="--delayVariable:@i">
-            <div class="col-habit">
-                @(string.IsNullOrEmpty(item.Habit.Emoji) ? "🌿" : item.Habit.Emoji)
-            </div>
-            
-            <div class="col-habit">
-                @item.Habit.Name
-            </div>
-            
-            <div class="col-habit">
-                @item.Streak
-            </div>
-            
-            <div class="col-habit col-plant">
-                <div class="pixel-border plant @stageClass">
-                    <img src="@stageImage" alt="@stageClass">
-                </div>
-            </div>
-            
-            <form class="col-habit col-action" method="post" asp-controller="Ponsai" asp-action="LogToday">
-                <input type="hidden" name="habitId" value="@item.Habit.Id">
-                <button type="submit" @(item.LoggedToday ? "disabled" : "")>
-                    @(item.LoggedToday ? "✅ Logged" : "Log today")
-                </button>
-            </form>
+        <div class="description-box pixel-border2 slideIn1">
+            No habits yet <br/>
+            Click "Add a new habit" to start your journey today
         </div>
     }
+    else
+    {
+        <div class="habit-row pixel-border2">
+            <div class="col-habit">
+                Emoji
+            </div>
+            <div class="col-habit">
+                Name
+            </div>
+            <div class="col-habit">
+                Streak
+            </div> 
+            <div class="col-habit col-plant">
+                Progress
+            </div>
+            <div class="col-habit col-action">
+                Action
+            </div>
+        </div>
+        
+        foreach (var (item, i) in Model.Select((m, idx) => (m, idx)))
+        {
+            string stageClass;
+            string stageImage;
+            if (item.Streak == 0)
+            {
+                stageClass = "stage-seed";
+                stageImage = "bonsai-1.png";
+            }
+            else if (item.Streak == 1 || item.Streak == 2)
+            {
+                stageClass = "stage-sprout";
+                stageImage = "bonsai-2.png";
+            }
+            else if (item.Streak >= 3 && item.Streak <= 6)
+            {
+                stageClass = "stage-sapling";
+                stageImage = "bonsai-3.png";
+            }
+            else if (item.Streak >= 7 && item.Streak <= 13)
+            {
+                stageClass = "stage-young";
+                stageImage = "bonsai-4.png";
+            }
+            else
+            {
+                stageClass = "stage-bonsai";
+                stageImage = "bonsai-5.png";
+            }
+
+            stageImage = Url.Content("~/images/ponsai/" + stageImage);
+            
+            <div class="habit-row pixel-border2" style="--delayVariable:@i">
+                <div class="col-habit">
+                    @(string.IsNullOrEmpty(item.Habit.Emoji) ? "🌿" : item.Habit.Emoji)
+                </div>
+                
+                <div class="col-habit">
+                    @item.Habit.Name
+                </div>
+                
+                <div class="col-habit">
+                    @item.Streak
+                </div>
+                
+                <div class="col-habit col-plant">
+                    <div class="pixel-border plant @stageClass">
+                        <img src="@stageImage" alt="@stageClass">
+                    </div>
+                </div>
+                
+                <form class="col-habit col-action" method="post" asp-controller="Ponsai" asp-action="LogToday">
+                    <input type="hidden" name="habitId" value="@item.Habit.Id">
+                    <button type="submit" class="btn-ponsai-log" @(item.LoggedToday ? "disabled" : "")>
+                        @(item.LoggedToday ? "✅ Logged" : "Log today")
+                    </button>
+                </form>
+            </div>
+        }
 }
 
 <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@1/index.js"></script>
 
 <form method="post" asp-controller="Ponsai" asp-action="AddHabit">
-    <div class="container habit-form slideIn1">
-        <div class="row">
+    <div class="container habit-form">
+        <div class="row slideIn1">
             <div class="col-6">
                 New habit name:
             </div>
@@ -109,7 +118,7 @@ else
                 <input class="habit-input-text" type="text" name="name" required>
             </div>
         </div>
-        <div class="row">
+        <div class="row slideIn1">
             <div class="col-6">
                 Emoji:
             </div>
@@ -118,7 +127,7 @@ else
                 <emoji-picker style="display:none;" id="picker"></emoji-picker>
             </div>
         </div>
-        <div class="row">
+        <div class="row slideIn2">
             <div class="col-12 text-center">
                 <button type="submit" class="add-habit-btn">Add a new habit</button>
             </div>
@@ -126,6 +135,9 @@ else
         </div>
     </div>
 </form>
+}
+
+
 
 <script>
     const input = document.getElementById('emojiInput');

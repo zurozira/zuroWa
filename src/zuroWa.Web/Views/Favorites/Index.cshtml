@@ -1,18 +1,24 @@
+@using System.Security.Claims
+
 @model IEnumerable<zuroWa.Core.Domain.EyeMax.Movie>
 
 @{
-    ViewBag.Title = "My favorites";
+    ViewBag.Title = "Favorite movies";
     Layout = "_Layout";
 }
 
 <div class="headerTitle text-center">
-    <h1>My favorite list</h1>
+    <h1>Favorite list</h1>
+</div>
+
+<div class="description-box pixel-border2 slideIn1">
+    All users favorite movies will be shown here, maybe I'll like your movies :)
 </div>
 
 @if (!Model.Any())
 {
     <div class="movie-row pixel-border2">
-        <p>Favorite list is currently empty</p>
+        Favorite list is currently empty
     </div>
 }
 else
@@ -44,12 +50,23 @@ else
                     @item.AddedAt.ToString("MMM dd, yyyy")
                 </div>
                 <div class="col-desc">
-                    @(item.MyComment?.Length > 150 ? item.MyComment.Substring(0, 150) + "…" : item.MyComment ?? "No comment available.")
+                    @(item.MyComment?.Length > 150 ? item.MyComment.Substring(0, 150) + "…" : item.MyComment ?? "No comment available")
                 </div>
-                <form asp-action="Remove" asp-controller="Favorites" method="post">
-                    <input type="hidden" name="tmdbId" value="@item.TmdbId" />
-                    <button type="submit" class="btn-remove">Remove</button>
-                </form>
+                <div class="col-date">
+                    @item.SavedBy
+                </div>
+            
+                @if (User.FindFirstValue(ClaimTypes.NameIdentifier) == item.UserId)
+                {
+                    <form asp-action="Remove" asp-controller="Favorites" method="post">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button type="submit" class="btn-favorite-remove">Remove</button>
+                    </form>
+                }
+                else
+                {
+                    <button class="btn-favorite-remove" disabled>No Access</button>
+                }
             </div>
         </div>
     }

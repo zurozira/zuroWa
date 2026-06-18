@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using zuroWa.Core.Domain;
 using zuroWa.Core.Domain.EyeMax;
 using zuroWa.Core.Domain.Ponsai;
 using zuroWa.Core.Domain.ZicZacZu;
@@ -6,7 +8,7 @@ using zuroWa.Core.Domain.ZicZacZu;
 namespace zuroWa.Core.Data;
 
 // AppDbContext is the single gateway between C# code and DB
-public class AppDbContext(DbContextOptions<AppDbContext> dbContextOptions) : DbContext
+public class AppDbContext(DbContextOptions<AppDbContext> dbContextOptions) : IdentityDbContext<AppUser>(dbContextOptions)
 {
     
     // EYEMAX
@@ -33,6 +35,11 @@ public class AppDbContext(DbContextOptions<AppDbContext> dbContextOptions) : DbC
     // Property named HabitId on HabitLog -> foreign key to Habits table
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        // IdentityDbContext has its own OnModelCreating
+        // that sets up all Identity tables: AspNetUsers, AspNetRoles,...
+        // Those tables never get configured if we dont call base.OnModelCreating(builder)
+        base.OnModelCreating(modelBuilder);
+        
         modelBuilder.Entity<HabitLog>() // Configuring HabitLog table
             .HasIndex(h => new { h.HabitId, h.LoggedOn }) // Create a composite index on these 2 columns
             .IsUnique(); // Db should reject any row where this combination already exists

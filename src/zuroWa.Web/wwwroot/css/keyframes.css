@@ -53,3 +53,8 @@
         transform: translateX(0);
     }
 }
+
+.slideIn2 {
+    opacity: 0;
+    animation: 1s slideIn2 ease forwards;
+}

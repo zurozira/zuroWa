@@ -1,0 +1,88 @@
+@model zuroWa.Web.Models.Account.RegisterViewModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "_Layout";
+}
+
+<div class="headerTitle text-center">
+    <h1>Register</h1>
+</div>
+
+<form method="post" asp-action="Register">
+    @Html.AntiForgeryToken()
+    
+    <div class="account-form">
+        <div asp-validation-summary="ModelOnly" style="color: red"></div>
+        <div class="container slideIn1">
+            <div class="row">
+                <div class="col-4 account-form-label">
+                    <label asp-for="Username"></label>
+                </div>
+                <div class="col-8 account-form-input">
+                    <input type="text" asp-for="Username"/>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <span asp-validation-for="Username"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4 account-form-label">
+                    <label asp-for="Password"></label>
+                </div>
+                <div class="col-8 account-form-input">
+                    <input type="password" asp-for="Password"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <span asp-validation-for="Password"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4 account-form-label">
+                    <label asp-for="ConfirmPassword"></label>
+                </div>
+                <div class="col-8 account-form-input">
+                    <input type="password" asp-for="ConfirmPassword"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <span asp-validation-for="ConfirmPassword"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="account-form-button">
+            <button class="animated-button-small slideIn2" type="submit">
+                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                </svg>
+                <span class="text">Submit</span>
+                <span class="circle"></span>
+                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                </svg>
+            </button>
+        </div>
+
+    </div>
+    
+    
+</form>
+
+@section Scripts
+{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

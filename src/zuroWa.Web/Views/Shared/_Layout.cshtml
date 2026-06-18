@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Cong Vu</title>
+    <title>@ViewData["Title"] - zuroWa</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     
     <link rel="stylesheet" href="~/css/ziczaczu.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/account.css" asp-append-version="true" />
 </head>
 <body>
     <header>
@@ -28,7 +29,7 @@
                             <a class="nav-link" asp-area="" asp-controller="EyeMax" asp-action="Search">Search Movies</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Favorites" asp-action="Index">My movie list</a>
+                            <a class="nav-link" asp-area="" asp-controller="Favorites" asp-action="Index">Fav List</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Ponsai" asp-action="Index">Ponsai</a>
@@ -37,6 +38,9 @@
                             <a class="nav-link" asp-area="" asp-controller="ZicZacZu" asp-action="Index">ZicZacZu</a>
                         </li>
                     </ul>
+                    <div class="nav-auth">
+                        <partial name="_LoginPartial"/>
+                    </div>
                 </div>
             </div>
         </nav>

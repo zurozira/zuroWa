@@ -1,3 +1,36 @@
+/*==MOVIES==*/
+.btn-movie-add {
+    background: #ebdbb2;
+    border-radius: 5px;
+    display: flex;
+    padding: 5px 5px;
+}
+
+/* FAVORITE */
+.btn-favorite-remove {
+    width: 90px;
+    border-radius: 5px;
+    background: #ebdbb2;
+}
+
+/*PONSAI*/
+.btn-ponsai-log {
+    background: #ebdbb2;
+    border-radius: 5px;
+}
+
+.add-habit-btn {
+    color: #fff;
+    background-color: #c1c019;
+    padding: 1px 3px 1px 3px;
+    font-size: 16px;
+    border: 1px solid #ecdfcc;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100px;
+    border-radius: 5px;
+}
+
 /*== ZICZACZU ==*/
 .animated-button2 {
     position: relative;
@@ -176,6 +209,98 @@
 }
 
 .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+}
+
+/* ACCOUNT */
+
+.animated-button-small {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 26px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: greenyellow;
+    box-shadow: 0 0 0 2px greenyellow;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+
+    width: 100px;
+}
+
+.animated-button-small svg {
+    position: absolute;
+    width: 24px;
+    fill: greenyellow;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button-small .arr-1 {
+    right: 16px;
+}
+
+.animated-button-small .arr-2 {
+    left: -25%;
+}
+
+.animated-button-small .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button-small .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button-small:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+}
+
+.animated-button-small:hover .arr-1 {
+    right: -25%;
+}
+
+.animated-button-small:hover .arr-2 {
+    left: 16px;
+}
+
+.animated-button-small:hover .text {
+    transform: translateX(12px);
+}
+
+.animated-button-small:hover svg {
+    fill: #212121;
+}
+
+.animated-button-small:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px greenyellow;
+}
+
+.animated-button-small:hover .circle {
     width: 220px;
     height: 220px;
     opacity: 1;

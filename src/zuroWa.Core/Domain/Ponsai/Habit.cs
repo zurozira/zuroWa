@@ -9,4 +9,7 @@ public class Habit
     
     // This helps Habit to have a HabitLogs navigation property:
     public ICollection<HabitLog> HabitLogs { get; set; } = new List<HabitLog>();
+
+    public string UserId { get; set; } = string.Empty;
+    public AppUser? User { get; set; } // nav property to EF Core
 }

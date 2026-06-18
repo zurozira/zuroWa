@@ -2,25 +2,25 @@
 
 **zuro's Web Apps** is my personal portfolio of web applications built with ASP.NET Core MVC.
 
-**Live:** [https://zurowa.azurewebsites.net](https://zurowa.azurewebsites.net) *(Free tier — may take a moment to wake up)*
+**Live:** [https://zurowa.azurewebsites.net](https://zurowa.azurewebsites.net) *(Free tier ~ may take a moment to wake up, I will upgrade soon)*
 
----
+***
 
 ## What is zuroWa?
 
 zuroWa is my portfolio platform where each section showcases a different web app, all built and maintained by me. New apps get added over time.
 
----
+***
 
 ## Apps
 
-### ZicZacZu: Async PvP Tic-Tac-Toe
-A turn-based Tic-Tac-Toe game to play with a friend, anytime. Create a game, share a code, and take turns on your own schedule  (no real-time required).
+### ZicZacZu: PvP Tic-Tac-Toe
+A turn-based Tic-Tac-Toe game to play with a friend, anytime. Create a game, share a code, and take turns on your own schedule (no real-time required so you can come back anytime and pick up where you left off).
 
 - **Route:** `/ZicZacZu`
-- **Status:** ✅ Live 
+- **Status:** ✅ Live
 - **Tech:** SQLite, EF Core, jQuery
-- **Rules:** 5×5 grid, 4-in-a-row wins
+- **Rules:** 5×5 grid, 4-in-a-row wins (No login required for now)
 
 ### Ponsai: Habit Tracker
 Track daily habits with a visual bonsai tree that grows with your streak. Log a habit each day to watch your tree grow from a seed to a full bonsai. Miss a day and the streak resets.
@@ -28,22 +28,31 @@ Track daily habits with a visual bonsai tree that grows with your streak. Log a 
 - **Route:** `/Ponsai`
 - **Status:** ✅ Live
 - **Tech:** SQLite, EF Core
+- **Auth:** Per-user habits — each account has their own habit list (Log in required)
 
 ### EyeMax: Movie Search & Favorites
-Search any movie title and get live results powered by the TMDB API including posters, release dates, and overviews. Save movies to your personal favorites list.
+Search any movie title and get live results powered by the TMDB API including posters, release dates, and overviews. Save movies to a shared community favorites list.
 
 - **Route:** `/EyeMax` (search), `/Favorites` (favorites)
 - **API:** [The Movie Database (TMDB)](https://www.themoviedb.org/)
 - **Status:** ✅ Live
+- **Auth:** Login required to save/remove favorites; anyone can browse the list
 
----
+***
+
+## Member Portal
+
+Register or log in at `/Account/Login` to unlock per-user features.
+
+- **Members** can save EyeMax favorites and track their own Ponsai habits
+- **Admin** (me) has full access including future moderation features
+
+***
 
 ### More Coming Soon
-- Member portal with authentication and roles
-- Per-user Favorites and Ponsai data
-- Guestbook — leave a message
+- Guestbook: leave a message (shared board, login required to post)
 
----
+***
 
 ## Tech Stack
 
@@ -55,7 +64,7 @@ Search any movie title and get live results powered by the TMDB API including po
 | Database | SQLite (EF Core) |
 | Hosting | Azure App Service (Linux, Free F1 tier) |
 
----
+***
 
 ## Project Structure
 
@@ -73,18 +82,19 @@ zuroWa/
    │       ├── Ponsai/           # PonsaiService, HabitsWithStreak
    │       └── ZicZacZu/         # ZicZacZuService
    └── zuroWa.Web/               # ASP.NET Core MVC presentation tier
-       ├── Controllers/          # EyeMaxController, FavoritesController,
-       │                         # HomeController, PonsaiController,
-       │                         # ZicZacZuController
+       ├── Controllers/          # AccountController, EyeMaxController,
+       │                         # FavoritesController, HomeController,
+       │                         # PonsaiController, ZicZacZuController
        ├── Views/
           ├── Home/             # Portfolio homepage
+          ├── Account/          # Login, Register views
           ├── EyeMax/           # Movie search views
-          ├── Favorites/        # Favorites list view
+          ├── Favorites/        # Shared favorites list view
           ├── Ponsai/           # Habit tracker views
           └── ZicZacZu/         # Game lobby + session views
 ```
 
----
+***
 
 ## Running Locally
 
@@ -122,3 +132,6 @@ zuroWa/
    ```
 
 5. Open `https://localhost:5001`
+- **Status:** ✅ Live
+
+---

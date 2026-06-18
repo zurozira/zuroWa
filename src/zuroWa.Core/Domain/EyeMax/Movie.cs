@@ -9,4 +9,7 @@ public class Movie
     public string Title { get; set; } = string.Empty;
     public string PosterPath { get; set; } = string.Empty;
 
+    public string UserId { get; set; } = string.Empty;
+
+    public string SavedBy { get; set; } = string.Empty;
 }

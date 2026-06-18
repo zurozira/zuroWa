@@ -8,7 +8,10 @@ public class EyeMaxFavoriteService(AppDbContext appDbContext)
 {
     public async Task<List<Movie>> GetAllAsync()
     {
-        return await appDbContext.Movies.ToListAsync();
+        // Order helps show newest added first
+        return await appDbContext.Movies
+            .OrderByDescending(m => m.AddedAt)
+            .ToListAsync();
     }
 
     public async Task AddAsync(Movie movie)
@@ -19,15 +22,17 @@ public class EyeMaxFavoriteService(AppDbContext appDbContext)
         await appDbContext.SaveChangesAsync();
     }
 
-    public async Task RemoveAsync(int tmdbId)
+    public async Task RemoveAsync(int id, string userId)
     {
-        var movie = await appDbContext.Movies.FirstOrDefaultAsync(m => m.TmdbId == tmdbId);
+        var movie = await appDbContext.Movies.FirstOrDefaultAsync(m => m.Id == id);
         
         if (movie is null) return;
-        
-        appDbContext.Movies.Remove(movie);
 
-        await appDbContext.SaveChangesAsync();
+        if (movie.UserId == userId)
+        {
+            appDbContext.Movies.Remove(movie);
+
+            await appDbContext.SaveChangesAsync();
+        }
     }
-    
 }

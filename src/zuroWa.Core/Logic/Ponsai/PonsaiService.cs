@@ -28,7 +28,7 @@ public class PonsaiService(AppDbContext appDbContext)
         {
             if (i > 0 && logs[i] != logs[i - 1].AddDays(-1))
             {
-                return 0;
+                break; // Stop counting but keep what we have
             }
             count++;
         }
@@ -36,7 +36,7 @@ public class PonsaiService(AppDbContext appDbContext)
         return count;
     }
 
-    public async Task<List<HabitsWithStreak>> GetAllHabitsAsync()
+    public async Task<List<HabitsWithStreak>> GetAllHabitsAsync(string userId)
     {
         DateOnly today = DateOnly.FromDateTime(DateTime.UtcNow);
         
@@ -46,6 +46,7 @@ public class PonsaiService(AppDbContext appDbContext)
         // Habit has a HabitLogs navigation property (Check HabitLog and Habit class)
         // Load the logs with the habits in one query:
         var habits = await appDbContext.Habits
+            .Where(h => h.UserId == userId)
             .Include(h => h.HabitLogs)
             .ToListAsync();
 
@@ -65,12 +66,18 @@ public class PonsaiService(AppDbContext appDbContext)
         return hWithStreak;
     }
 
-    public async Task LogTodayAsync(int habitId)
+    public async Task LogTodayAsync(int habitId, string userId)
     {
+        // Verify habit belong to this user
+        bool ownsHabit = await appDbContext.Habits
+            .AnyAsync(h => h.Id == habitId && h.UserId == userId);
+
+        if (!ownsHabit) throw new UnauthorizedAccessException();
+        
         DateOnly today = DateOnly.FromDateTime(DateTime.UtcNow);
 
-        if (await appDbContext.HabitLogs.AnyAsync(
-                h => h.HabitId == habitId && h.LoggedOn == today))
+        if (await appDbContext.HabitLogs
+                .AnyAsync(h => h.HabitId == habitId && h.LoggedOn == today))
         {
             // Already logged today, do nothing or throw an exception
             return;
@@ -83,9 +90,9 @@ public class PonsaiService(AppDbContext appDbContext)
         await appDbContext.SaveChangesAsync();
     }
 
-    public async Task AddHabitAsync(string name, string? emoji)
+    public async Task AddHabitAsync(string name, string? emoji, string userId)
     {
-        Habit newHabit = new Habit { Name = name, Emoji = emoji };
+        Habit newHabit = new Habit { Name = name, Emoji = emoji, UserId = userId};
 
         appDbContext.Add(newHabit);
 
