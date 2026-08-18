@@ -17,87 +17,88 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
+build_property.EntryPointFilePath = 
 build_property.RootNamespace = zuroWa.Web
 build_property.RootNamespace = zuroWa.Web
-build_property.ProjectDir = /home/zuro/myRepos/zuroWa/src/zuroWa.Web/
+build_property.ProjectDir = /home/zuro/projectsZ/zuroWa/src/zuroWa.Web/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.RazorLangVersion = 9.0
+build_property.RazorLangVersion = 10.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/zuro/myRepos/zuroWa/src/zuroWa.Web
+build_property.MSBuildProjectDirectory = /home/zuro/projectsZ/zuroWa/src/zuroWa.Web
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Areas/Identity/Pages/_Layout.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Areas/Identity/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Areas/Identity/Pages/_ViewStart.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/Account/Login.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/Account/Register.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/EyeMax/Search.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/EyeMax/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXllTWF4L1NlYXJjaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/EyeMax/SearchResult.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/EyeMax/SearchResult.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXllTWF4L1NlYXJjaFJlc3VsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/Favorites/Index.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/Favorites/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmF2b3JpdGVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/Home/Index.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/Home/Privacy.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/Ponsai/Index.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/Ponsai/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9uc2FpL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/Shared/Error.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/Shared/_LoginPartial.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/ZicZacZu/Index.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/ZicZacZu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmljWmFjWnUvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/ZicZacZu/Session.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/ZicZacZu/Session.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmljWmFjWnUvU2Vzc2lvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/_ViewImports.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/_ViewStart.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/zuro/myRepos/zuroWa/src/zuroWa.Web/Views/Shared/_Layout.cshtml]
+[/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-g9z8ybox5o

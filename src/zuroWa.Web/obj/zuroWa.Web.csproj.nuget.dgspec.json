@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/zuro/myRepos/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj": {}
+    "/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj": {}
   },
   "projects": {
-    "/home/zuro/myRepos/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj": {
+    "/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/zuro/myRepos/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj",
+        "projectUniqueName": "/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj",
         "projectName": "zuroWa.Core",
-        "projectPath": "/home/zuro/myRepos/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj",
+        "projectPath": "/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj",
         "packagesPath": "/home/zuro/.nuget/packages/",
-        "outputPath": "/home/zuro/myRepos/zuroWa/src/zuroWa.Core/obj/",
+        "outputPath": "/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/zuro/.nuget/NuGet/NuGet.Config"
@@ -20,11 +20,11 @@
           "net10.0"
         ],
         "sources": {
-          "/usr/lib64/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -39,10 +39,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
@@ -82,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.108/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/home/zuro/.dotnet/sdk/10.0.302/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -360,14 +361,14 @@
         }
       }
     },
-    "/home/zuro/myRepos/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj": {
+    "/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/zuro/myRepos/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj",
+        "projectUniqueName": "/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj",
         "projectName": "zuroWa.Web",
-        "projectPath": "/home/zuro/myRepos/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj",
+        "projectPath": "/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/zuroWa.Web.csproj",
         "packagesPath": "/home/zuro/.nuget/packages/",
-        "outputPath": "/home/zuro/myRepos/zuroWa/src/zuroWa.Web/obj/",
+        "outputPath": "/home/zuro/projectsZ/zuroWa/src/zuroWa.Web/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/zuro/.nuget/NuGet/NuGet.Config"
@@ -376,15 +377,15 @@
           "net10.0"
         ],
         "sources": {
-          "/usr/lib64/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/zuro/myRepos/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj": {
-                "projectPath": "/home/zuro/myRepos/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj"
+              "/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj": {
+                "projectPath": "/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/zuroWa.Core.csproj"
               }
             }
           }
@@ -399,10 +400,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.UI": {
@@ -451,7 +453,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.108/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/home/zuro/.dotnet/sdk/10.0.302/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
