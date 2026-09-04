@@ -8,31 +8,31 @@ html {
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 18px;
-  }
+    html {
+        font-size: 18px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem #000000, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem #000000, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
     font-family: 'Jersey 10', 'Trebuchet MS', sans-serif;
     margin-bottom: 60px;
-    
+
     background-image: url("https://w.wallhaven.cc/full/0j/wallhaven-0j1rqw.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color: #ECDFCC;
-    
+
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
@@ -46,12 +46,12 @@ main {
 /*==FORM==*/
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+    color: var(--bs-secondary-color);
+    text-align: end;
 }
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+    text-align: start;
 }
 
 .form-group {
@@ -62,19 +62,19 @@ main {
 }
 
 .form-control {
-    font-family: "Jersey 10" ,"Trebuchet MS", sans-serif;
+    font-family: "Jersey 10", "Trebuchet MS", sans-serif;
     font-size: 14px;
     background-color: #1a1d20;
     color: #ECDFCC;
 }
 
-    .form-control:focus {
-        outline: none;
-        border-color: #b6ff00;
-        box-shadow: 0 0 0 0.2rem #b6ff00;
-        background-color: #1a1d20;
-        color: #ECDFCC;
-    }
+.form-control:focus {
+    outline: none;
+    border-color: #b6ff00;
+    box-shadow: 0 0 0 0.2rem #b6ff00;
+    background-color: #1a1d20;
+    color: #ECDFCC;
+}
 
 .control-label {
     margin-left: 10px;
@@ -97,11 +97,11 @@ main {
     background-image: url("https://w.wallhaven.cc/full/0j/wallhaven-0j1rqw.jpg");
 }
 
-    .navbar-custom .navbar-brand,
-    .navbar-custom .navbar-brand .nav-link {
-        transition: 0.3s;
-        color: #ECDFCC;
-    }
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-brand .nav-link {
+    transition: 0.3s;
+    color: #ECDFCC;
+}
 
 .navbar-brand:hover {
     color: #b6ff00;
@@ -128,20 +128,20 @@ main {
     aspect-ratio: 1;
 }
 
-    .loader:before,
-    .loader:after {
-        content: "";
-        flex: 1;
-        aspect-ratio: 1;
-        --g: conic-gradient(from -90deg at 10px 10px,var(--loader-color) 90deg,#0000 0);
-        background: var(--g), var(--g), var(--g);
-        filter: drop-shadow(30px 30px 0 var(--loader-color));
-        animation: l20 1s infinite;
-    }
+.loader:before,
+.loader:after {
+    content: "";
+    flex: 1;
+    aspect-ratio: 1;
+    --g: conic-gradient(from -90deg at 10px 10px, var(--loader-color) 90deg, #0000 0);
+    background: var(--g), var(--g), var(--g);
+    filter: drop-shadow(30px 30px 0 var(--loader-color));
+    animation: l20 1s infinite;
+}
 
-    .loader:after {
-        transform: scaleX(-1);
-    }
+.loader:after {
+    transform: scaleX(-1);
+}
 
 @keyframes l20 {
     0% {
@@ -153,7 +153,7 @@ main {
     }
 
     66% {
-        background-position: 0 20px,10px 10px,20px 0
+        background-position: 0 20px, 10px 10px, 20px 0
     }
 
     100% {
@@ -183,16 +183,16 @@ main {
 }
 
 .movie-row {
-    display:flex;
+    display: flex;
     align-items: center;
     gap: 1rem;
     padding: 0.5rem;
     margin-bottom: 1rem;
-    
+
     max-width: 900px;
     width: 100%;
     margin-inline: auto;
-    
+
     opacity: 0;
 
     animation: fadeIn 1s ease forwards;
@@ -200,28 +200,34 @@ main {
 }
 
 
-.col-poster { 
-    width: 120px; 
+.col-poster {
+    width: 120px;
     flex-shrink: 0;
 }
-.col-title { 
-    width: 180px; 
+
+.col-title {
+    width: 180px;
 }
-.col-director { 
-    width: 150px; 
+
+.col-director {
+    width: 150px;
 }
-.col-date { 
-    width: 100px; 
+
+.col-date {
+    width: 100px;
 }
-.col-desc { 
+
+.col-desc {
     flex: 1;
     display: -webkit-box;
-    -webkit-line-clamp: 3;     /* show max 3 lines */
+    -webkit-line-clamp: 3; /* show max 3 lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-.col-actions  { 
-    width: 120px; flex-shrink: 0; 
+
+.col-actions {
+    width: 120px;
+    flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
@@ -239,9 +245,11 @@ main {
     cursor: pointer;
     text-decoration: none;
 }
+
 .Pbutton-details:active {
     transform: translateY(5px);
 }
+
 .Pbutton-delete {
     color: #fff;
     background-color: #fb4934;
@@ -251,6 +259,7 @@ main {
     cursor: pointer;
     text-decoration: none;
 }
+
 .Pbutton-delete:active {
     transform: translateY(5px);
 }
@@ -270,25 +279,27 @@ main {
 .detail-title {
     font-size: 3rem;
 }
+
 .detail-director {
     font-size: 2rem;
 }
+
 .detail-date, .detail-genre {
     font-size: 2rem;
 }
+
 .detail-description {
     font-size: 1.6rem;
     font-style: italic;
 }
 
 
-
-
 /* PAGES */
 /* Index */
 #about1 {
     max-width: 900px;
-    place-self: center;
+    /* place-self: center; <-- REMOVE */
+    margin: 0 auto; /* <-- ADD (centers the block itself) */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -422,7 +433,7 @@ main {
 
 /* FAVORITE */
 .favorite-row .movie-row {
-    place-self: center;
+    margin-inline: auto;
 }
 
 /* PONSAI */
@@ -441,8 +452,8 @@ main {
 }
 
 .habit-row {
-    place-self: center;
-    display:flex;
+    margin-inline: auto;   /* <-- ADD */
+    display: flex;
     width: 70%;
     max-width: 630px;
     align-items: stretch;
@@ -455,7 +466,7 @@ main {
     animation: fadeIn 1s ease forwards;
     animation-delay: calc(var(--delayVariable) * 0.1s);
 
-    background-color: rgba(0, 0, 0, 0.4);   /* ✅ semi-transparent dark overlay */
+    background-color: rgba(0, 0, 0, 0.4); /* ✅ semi-transparent dark overlay */
 }
 
 .col-habit {
@@ -498,17 +509,17 @@ main {
 
 @media (max-width: 480px) {
     .habit-row {
-        width: 100%;      /* full width on mobile */
+        width: 100%; /* full width on mobile */
     }
 
     .col-action {
-        width: 100%;      /* button takes full row on mobile */
+        width: 100%; /* button takes full row on mobile */
         text-align: center;
     }
 }
 
 .habit-form {
-    align-self: center;
+    margin: 0 auto;
     width: 350px;
     animation: fadeIn 1s ease forwards;
 }
@@ -540,8 +551,12 @@ emoji-picker {
 /**/
 .description-box {
     padding: 20px 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     display: flex;
-    place-self: center;
+    flex-direction: column;    /* Ensures internal text stays stacked nicely */
+    align-items: center;       /* Centers the text lines inside the box */
+    margin-inline: auto;       /* Explicitly centers the block itself horizontally */
+    width: fit-content;        /* Keeps the box from stretching full-width */
+    max-width: 900px;
 }
 

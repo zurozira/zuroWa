@@ -1,77 +1,59 @@
 # zuroWa
 
-**zuro's Web Apps** is my personal portfolio of web applications built with ASP.NET Core MVC.
+zuro's Web Apps is my personal dumping ground for ASP.NET Core projects :D
+**Live:** [zurowa.cong-vu.com](https://zurowa.cong-vu.com)
 
-**Live:** [https://zurowa.azurewebsites.net](https://zurowa.azurewebsites.net) *(B1 Tier and I will get a proper domain soon :)*
+## What's this about
 
-***
+Instead of scattering a bunch of separate little repos and demo links everywhere, I built zuroWa as one platform that hosts all my smaller web apps under one roof. Each app below runs live at its own route. I add new ones whenever I finish something worth showing off.
 
-## What is zuroWa?
+## The apps
 
-zuroWa is my portfolio platform where each section showcases a different web app, all built and maintained by me. New apps get added over time.
+### ZicZacZu ~ PvP Tic-Tac-Toe, but async
 
-***
+Turn-based Tic-Tac-Toe you can play with a friend on your own schedule. No need to both be online at the same time: create a game, share the code, take your turn whenever, come back later and it's still waiting for you.
 
-## Apps
-
-### ZicZacZu: PvP Tic-Tac-Toe
-A turn-based Tic-Tac-Toe game to play with a friend, anytime. Create a game, share a code, and take turns on your own schedule (no real-time required so you can come back anytime and pick up where you left off).
-
-- **Route:** `/ZicZacZu`
-- **Status:** ✅ Live
-- **Tech:** SQLite, EF Core, jQuery
-- **Rules:** 5×5 grid, 4-in-a-row wins (No login required for now)
-
-### Ponsai: Habit Tracker
-Track daily habits with a visual bonsai tree that grows with your streak. Log a habit each day to watch your tree grow from a seed to a full bonsai. Miss a day and the streak resets.
-
-- **Route:** `/Ponsai`
-- **Status:** ✅ Live
 - **Tech:** SQLite, EF Core
-- **Auth:** Per-user habits — each account has their own habit list (Log in required)
+- **Rules:** 5×5 grid, get 4 in a row to win. No login needed (yet)
 
-### EyeMax: Movie Search & Favorites
-Search any movie title and get live results powered by the TMDB API including posters, release dates, and overviews. Save movies to a shared community favorites list.
+### Ponsai ~ habit tracker with a bonsai gimmick
 
-- **Route:** `/EyeMax` (search), `/Favorites` (favorites)
-- **API:** [The Movie Database (TMDB)](https://www.themoviedb.org/)
-- **Status:** ✅ Live
-- **Auth:** Login required to save/remove favorites; anyone can browse the list
+Log a habit each day and watch a little bonsai tree grow with your streak. Miss a day, streak resets, tree stops growing. Simple mechanic, but it's weirdly motivating watching a tree instead of just a number.
 
-***
+- **Tech:** SQLite, EF Core
+- **Auth:** login required — everyone's habits and streaks are private to their own account
 
-## Member Portal
+### EyeMax ~ movie search + shared favorites
 
-Register or log in at `/Account/Login` to unlock per-user features.
+Search any movie and pull live results straight from TMDB: posters, release dates, overviews, all of it. Anyone can browse the community favorites list, but you need an account to actually save or remove movies from it.
 
-- **Members** can save EyeMax favorites and track their own Ponsai habits
-- **Admin** (me) has full access including future moderation features
+- **API:** [TMDB](https://www.themoviedb.org/)
+- **Auth:** browsing is open to everyone, saving/removing requires login
 
-***
+## Accounts
 
-### More Coming Soon
-- Guestbook: leave a message (shared board, login required to post)
+Register or log in if you want the personalized stuff ~ saving EyeMax favorites, tracking your own Ponsai habits. I'm the admin, which for now just means I have full access and eventually some moderation tools once there's anything to moderate.
 
-***
+## What's coming next
 
-## Tech Stack
+- A card game with complex logic... More detail later!
 
-| Layer | Technology |
-|---|---|
-| Framework | ASP.NET Core MVC (.NET 10) |
-| Language | C# |
-| Frontend | Razor Views, Bootstrap, custom CSS |
-| Database | SQLite (EF Core) |
-| Hosting | Azure App Service (Linux, B1 tier) |
+## Tech stack
 
-***
+| Layer     | Technology                         |
+| --------- | ---------------------------------- |
+| Framework | ASP.NET Core MVC (.NET 10)         |
+| Language  | C#                                 |
+| Frontend  | Razor Views, Bootstrap, custom CSS |
+| Database  | SQLite (EF Core)                   |
+| Hosting   | Azure App Service (Linux, B1 tier) |
 
-## Project Structure
+## Project structure
 
 ```
 zuroWa/
 ├── src/
-   ├── zuroWa.Core/              # Domain, Data, and Logic
+   ├── zuroWa.Core/              # domain, data, business logic
    │   ├── Data/                 # AppDbContext, EF Core migrations
    │   ├── Domain/
    │   │   ├── EyeMax/           # Movie, TmdbMovie entities
@@ -81,57 +63,52 @@ zuroWa/
    │       ├── EyeMax/           # EyeMaxTmdbService, EyeMaxFavoriteService
    │       ├── Ponsai/           # PonsaiService, HabitsWithStreak
    │       └── ZicZacZu/         # ZicZacZuService
-   └── zuroWa.Web/               # ASP.NET Core MVC presentation tier
+   └── zuroWa.Web/               # the actual MVC app
        ├── Controllers/          # AccountController, EyeMaxController,
        │                         # FavoritesController, HomeController,
        │                         # PonsaiController, ZicZacZuController
        ├── Views/
-          ├── Home/             # Portfolio homepage
-          ├── Account/          # Login, Register views
-          ├── EyeMax/           # Movie search views
-          ├── Favorites/        # Shared favorites list view
-          ├── Ponsai/           # Habit tracker views
-          └── ZicZacZu/         # Game lobby + session views
+          ├── Home/              # portfolio homepage
+          ├── Account/           # login, register
+          ├── EyeMax/            # search views
+          ├── Favorites/         # shared favorites list
+          ├── Ponsai/            # habit tracker views
+          └── ZicZacZu/          # game lobby + session views
 ```
 
-***
+## Running it locally
 
-## Running Locally
+You'll need the [.NET 10 SDK](https://dotnet.microsoft.com/download) and a free [TMDB API key](https://www.themoviedb.org/settings/api) if you want EyeMax to actually pull movie data.
 
-### Prerequisites
-- [.NET 10 SDK](https://dotnet.microsoft.com/download)
-- A free [TMDB API key](https://www.themoviedb.org/settings/api)
+Clone it:
 
-### Setup
+```bash
+git clone https://github.com/zurozira/zuroWa.git
+cd zuroWa
+```
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/zurozira/zuroWa.git
-   cd zuroWa
-   ```
+Drop your TMDB key into `src/zuroWa.Web/appsettings.Development.json`:
 
-2. Add your TMDB API key to `src/zuroWa.Web/appsettings.Development.json`:
-   ```json
-   {
-     "EyeMax": {
-       "TmdbApiKey": "your_api_key_here"
-     }
-   }
-   ```
+```json
+{
+    "EyeMax": {
+        "TmdbApiKey": "your_api_key_here"
+    }
+}
+```
 
-3. Apply database migrations:
-   ```bash
-   dotnet ef database update \
-     --project src/zuroWa.Core \
-     --startup-project src/zuroWa.Web
-   ```
+Apply migrations:
 
-4. Run:
-   ```bash
-   dotnet run --project src/zuroWa.Web
-   ```
+```bash
+dotnet ef database update \
+  --project src/zuroWa.Core \
+  --startup-project src/zuroWa.Web
+```
 
-5. Open `https://localhost:5001`
-- **Status:** ✅ Live
+Run it:
 
----
+```bash
+dotnet run --project src/zuroWa.Web
+```
+
+Then open `https://localhost:5001` and poke around.

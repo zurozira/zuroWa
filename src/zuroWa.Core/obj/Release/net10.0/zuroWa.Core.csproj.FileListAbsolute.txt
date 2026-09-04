@@ -24,3 +24,16 @@
 /home/zuro/myRepos/zuroWa/src/zuroWa.Core/obj/Release/net10.0/refint/zuroWa.Core.dll
 /home/zuro/myRepos/zuroWa/src/zuroWa.Core/obj/Release/net10.0/zuroWa.Core.pdb
 /home/zuro/myRepos/zuroWa/src/zuroWa.Core/obj/Release/net10.0/ref/zuroWa.Core.dll
+/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/bin/Release/net10.0/zuroWa.Core.deps.json
+/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/bin/Release/net10.0/zuroWa.Core.dll
+/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/bin/Release/net10.0/zuroWa.Core.pdb
+/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/obj/Release/net10.0/zuroWa.Core.csproj.AssemblyReference.cache
+/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/obj/Release/net10.0/zuroWa.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/obj/Release/net10.0/zuroWa.Core.AssemblyInfoInputs.cache
+/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/obj/Release/net10.0/zuroWa.Core.AssemblyInfo.cs
+/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/obj/Release/net10.0/zuroWa.Core.csproj.CoreCompileInputs.cache
+/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/obj/Release/net10.0/zuroWa.Core.sourcelink.json
+/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/obj/Release/net10.0/zuroWa.Core.dll
+/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/obj/Release/net10.0/refint/zuroWa.Core.dll
+/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/obj/Release/net10.0/zuroWa.Core.pdb
+/home/zuro/projectsZ/zuroWa/src/zuroWa.Core/obj/Release/net10.0/ref/zuroWa.Core.dll
