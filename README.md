@@ -9,21 +9,27 @@ Instead of scattering a bunch of separate little repos and demo links everywhere
 
 ## The apps
 
-### ZicZacZu ~ PvP Tic-Tac-Toe, but async
+### ZicZacZu ~
+
+`PvP Tic-Tac-Toe, but async`
 
 Turn-based Tic-Tac-Toe you can play with a friend on your own schedule. No need to both be online at the same time: create a game, share the code, take your turn whenever, come back later and it's still waiting for you.
 
 - **Tech:** SQLite, EF Core
 - **Rules:** 5×5 grid, get 4 in a row to win. No login needed (yet)
 
-### Ponsai ~ habit tracker with a bonsai gimmick
+### Ponsai ~
+
+`habit tracker with a bonsai gimmick`
 
 Log a habit each day and watch a little bonsai tree grow with your streak. Miss a day, streak resets, tree stops growing. Simple mechanic, but it's weirdly motivating watching a tree instead of just a number.
 
 - **Tech:** SQLite, EF Core
 - **Auth:** login required — everyone's habits and streaks are private to their own account
 
-### EyeMax ~ movie search + shared favorites
+### EyeMax ~
+
+`movie search + shared favorites`
 
 Search any movie and pull live results straight from TMDB: posters, release dates, overviews, all of it. Anyone can browse the community favorites list, but you need an account to actually save or remove movies from it.
 
